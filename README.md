@@ -126,4 +126,4 @@ aicoding/
 
 ## License
 
-待补充。
+本项目采用 [CC BY-SA 4.0](LICENSE) 协议。

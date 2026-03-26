@@ -2,6 +2,16 @@
 
 本页用于整理与 AI coding（Vibe Coding）/ Coding Agent 相关的 skill、workflow、prompt 模板和实践经验。
 
+## 当前收录
+
+### 1. Superpowers
+
+- [Superpowers](https://github.com/obra/superpowers)
+
+Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，核心思想不是“给 agent 多几个提示词”，而是把 brainstorming、planning、TDD、debugging、review 这些流程模块化为可组合技能。
+
+如果实验室后续想研究“如何把 Coding Agent 从能写代码，提升到更稳定地完成工程任务”，Superpowers 很值得跟踪。
+
 ## 本页建议覆盖
 
 - skill 设计案例

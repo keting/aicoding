@@ -2,6 +2,14 @@
 
 本页用于整理 AI coding（Vibe Coding）/ Coding Agent 方向常见 benchmark、评测任务和实验参考资源，服务于实验设计与研究比较。
 
+## 当前收录
+
+### 1. XSCT Bench
+
+- [XSCT Bench](https://xsct.ai/)
+
+这个网站的价值不只是“排行榜”，而是它把模型放进更贴近真实使用的问题场景里做比较。对于实验室成员来说，它适合作为模型选型、任务观察和案例拆解入口。
+
 ## 本页建议覆盖
 
 - SWE-bench 及相关变体

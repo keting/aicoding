@@ -2,6 +2,13 @@
 
 本页用于整理 AI coding（Vibe Coding）/ Coding Agent 方向的重要论文，服务于论文阅读、研究追踪与选题分析。
 
+## 先从论文入口工具开始
+
+- [Hugging Face Papers](https://huggingface.co/papers)
+  适合快速发现最新 AI 论文与讨论热度。
+- [alphaXiv](https://www.alphaxiv.org/)
+  适合在阅读 arXiv 论文时结合社区批注和讨论。
+
 ## 本页建议覆盖
 
 - survey / review

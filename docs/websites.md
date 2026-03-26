@@ -1,6 +1,35 @@
 # Websites
 
-本页用于整理与 AI coding（Vibe Coding）/ Coding Agent 相关的网站、官方页面、社区入口和持续跟踪资源。
+本页用于整理与 AI coding（Vibe Coding）/ Coding Agent 相关的网站、官方页面、课程入口和持续跟踪资源。
+
+## 当前收录
+
+### 1. 学习课程
+
+- [Anthropic Claude 101](https://anthropic.skilljar.com/claude-101)
+  Anthropic 提供的免费课程，适合作为实验室成员第一次系统接触 Claude 使用方式的入口。
+
+### 2. 论文发现与阅读
+
+- [Hugging Face Papers](https://huggingface.co/papers)
+  适合快速查看最新 AI 论文和社区讨论热度。
+- [alphaXiv](https://www.alphaxiv.org/)
+  更偏“论文阅读和讨论辅助”，适合把论文发现和阅读批注结合起来。
+
+### 3. Benchmark 与模型选型入口
+
+- [XSCT Bench](https://xsct.ai/)
+  一个面向真实任务场景的评测网站，适合用来观察模型在具体任务上的表现，也适合作为模型选型参考入口。
+
+### 4. 主要模型公司入口
+
+- [Claude / Anthropic](https://www.anthropic.com/)
+- [ChatGPT / OpenAI](https://openai.com/)
+- [Gemini / Google](https://gemini.google.com/)
+- [智谱](https://www.zhipuai.cn/)
+- [MiniMax](https://www.minimax.io/)
+- [Kimi / Moonshot AI](https://www.moonshot.cn/)
+- [Qwen / 阿里云通义](https://qwenlm.github.io/)
 
 ## 本页建议覆盖
 

@@ -28,22 +28,17 @@
 
 ## 辅助工具
 
-### 1. 提示词与内容辅助
-
-- [PromptUp](https://promptup.net/)
-  一个提示语收集与浏览网站，适合在需要快速参考 prompt 写法、任务模板和表达方式时作为辅助入口使用。
-
-### 2. 终端与会话管理
+### 1. 终端与会话管理
 
 - `tmux`
   对长期运行 agent、远程服务器开发、多会话协作非常实用。至少建议掌握：`tmux new -s <name>`、`tmux attach -t <name>`、`tmux ls`、`Ctrl-b d`、`tmux kill-session -t <name>`。
 
-### 3. 远程与移动端协作
+### 2. 远程与移动端协作
 
 - [Happy Coder](https://happy.engineering/docs/)
   一个面向 Claude Code、Codex 等 AI coding agents 的移动端与远程控制工具，适合“离开工位后继续看 agent 在做什么”这类场景。
 
-### 4. 模型接入与中转
+### 3. 模型接入与中转
 
 - [Sub2API](https://github.com/Wei-Shaw/sub2api)
   一个面向订阅额度分发与 API Key 管理的 AI API gateway platform，强调多账户管理、鉴权计费、负载调度、并发控制和管理面板，适合作为 Claude Code、Codex、Gemini 等上层工具的模型接入层。
@@ -53,6 +48,11 @@
   一个基于 `one-api` 演化的增强分支，强调新的 UI、供应商管理、监控统计、价格更新和多供应商支持，适合关注面板与运维能力增强的读者继续跟踪。
 - [Claude Relay Service](https://github.com/Wei-Shaw/claude-relay-service)
   一个面向 Claude 访问场景的专项 relay 服务，强调多账户管理、Claude API 中转与自建部署；其 README 中也提示新项目可优先关注 `sub2api` 这一代方案。
+
+### 4. 提示词与内容辅助
+
+- [PromptUp](https://promptup.net/)
+  一个提示语收集与浏览网站，适合在需要快速参考 prompt 写法、任务模板和表达方式时作为辅助入口使用。
 
 ## 科研工具
 

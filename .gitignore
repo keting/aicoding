@@ -1,1 +1,18 @@
+# AI 工具本地配置
 AGENTS.md
+CLAUDE.md
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 编辑器与 IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.bak

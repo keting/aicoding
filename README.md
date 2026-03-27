@@ -47,18 +47,20 @@ aicoding/
     ├── getting-started.md
     ├── benchmarks.md
     ├── papers.md
-    └── research-topics.md
+    ├── research-topics.md
+    └── openclaw.md
 ```
 
 ## 内容导航
 
-1. [Tools](docs/tools.md)
-2. [Skills](docs/skills.md)
-3. [Websites](docs/websites.md)
-4. [Getting Started](docs/getting-started.md)
+1. [Getting Started](docs/getting-started.md)
+2. [Tools](docs/tools.md)
+3. [Skills](docs/skills.md)
+4. [Papers](docs/papers.md)
 5. [Benchmarks](docs/benchmarks.md)
-6. [Papers](docs/papers.md)
+6. [Websites](docs/websites.md)
 7. [Research Topics](docs/research-topics.md)
+8. [OpenClaw 专题](docs/openclaw.md)
 
 ## 推荐使用方式
 
@@ -104,7 +106,7 @@ aicoding/
 
 - 在社区或实践中影响较大的工具和系统
 - 对学习路径、研究设计或工程实践有明确帮助的资源
-- - 方向代表性强的论文与综述
+- 方向代表性强的论文与综述
 - 具有较高参考价值的 benchmark
 - 能够帮助实验室成员建立系统理解的内容
 

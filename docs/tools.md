@@ -58,12 +58,11 @@
 
 ### 1. 论文发现、阅读与管理
 
-- [Zotero](https://www.zotero.org/)
-  一个常用的文献管理工具，适合整理 AI coding / Coding Agent 方向的论文、网页、笔记与引用信息。对于需要长期积累论文阅读记录和选题资料的实验室用户，它比普通书签工具更适合作为基础研究工具。
-- [Hugging Face Papers](https://huggingface.co/papers)
-  适合快速查看最新 AI 论文和社区讨论热度。
-- [alphaXiv](https://www.alphaxiv.org/)
-  更偏“论文阅读和讨论辅助”，适合把论文发现和阅读批注结合起来。
+> 以下工具的详细说明见 [papers.md](papers.md) 的”论文入口工具”部分，此处仅做索引。
+
+- [Zotero](https://www.zotero.org/) — 文献管理与引用
+- [Hugging Face Papers](https://huggingface.co/papers) — 最新论文发现
+- [alphaXiv](https://www.alphaxiv.org/) — 论文阅读与社区讨论
 
 ## 后续可补充内容
 

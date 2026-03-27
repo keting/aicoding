@@ -4,19 +4,30 @@
 
 ## 先建立的几个概念
 
-- 什么是 AI coding
-- 什么是 Vibe Coding
-- 什么是 Coding Agent
-- AI coding、Vibe Coding 与 Coding Agent 之间的关系
-- 什么是 Harness Engineering
+### AI Coding
 
-## 概念提示
+AI coding 泛指利用大语言模型（LLM）辅助软件开发的各类实践，包括代码生成、代码补全、代码审查、Bug 修复、测试生成等。它是一个总括性概念，涵盖了从简单的自动补全到端到端自主编程的整个频谱。
+
+### Vibe Coding
+
+Vibe Coding 由 Andrej Karpathy 在 2025 年 2 月提出，指的是一种”凭感觉编程”的方式——开发者用自然语言描述意图，AI 生成代码，开发者不逐行审查，而是根据运行结果决定是否接受。它强调的是人与 AI 的交互范式转变：从”人写代码”到”人描述、AI 写、人验收”。
+
+### Coding Agent
+
+Coding Agent 是指能够自主规划、执行多步骤软件工程任务的 AI 系统。与单次代码补全不同，Coding Agent 可以理解仓库上下文、调用工具（终端、浏览器、文件系统）、迭代调试，直到任务完成。典型代表包括 Claude Code、Codex、SWE-agent 等。
+
+### 三者之间的关系
+
+- **AI coding** 是最广泛的上位概念
+- **Vibe Coding** 是 AI coding 中的一种交互范式，强调”人不需要完全理解生成代码”
+- **Coding Agent** 是 AI coding 的技术实现路径之一，强调”AI 能自主完成多步骤工程任务”
+- Vibe Coding 的体验往往依赖 Coding Agent 的能力，但两者关注点不同：前者关注人机交互方式，后者关注系统能力
 
 ### Harness Engineering
 
 - [Harness Engineering](https://harness-engineering.ai/)
 
-这个概念可以粗略理解为：相比单纯比较“哪个模型更强”，更关注如何把 agent 放进一个可控、可复现、可评估的工程 harness 里。对实验室来说，它很值得关注，因为很多真正拉开差距的地方往往不是模型本身，而是上下文组织、工具调用、权限策略、评测方式和工作流设计。
+这个概念可以粗略理解为：相比单纯比较”哪个模型更强”，更关注如何把 agent 放进一个可控、可复现、可评估的工程 harness 里。对实验室来说，它很值得关注，因为很多真正拉开差距的地方往往不是模型本身，而是上下文组织、工具调用、权限策略、评测方式和工作流设计。
 
 ## 建议的第一轮入门路径
 

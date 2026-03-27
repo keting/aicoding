@@ -16,11 +16,16 @@ Vibe Coding 由 Andrej Karpathy 在 2025 年 2 月提出，指的是一种”凭
 
 Coding Agent 是指能够自主规划、执行多步骤软件工程任务的 AI 系统。与单次代码补全不同，Coding Agent 可以理解仓库上下文、调用工具（终端、浏览器、文件系统）、迭代调试，直到任务完成。典型代表包括 Claude Code、Codex、SWE-agent 等。
 
+### Agentic Engineering
+
+Agentic Engineering 强调的不是“让模型直接回答问题”，而是把模型组织进一个能够持续执行任务的工程系统里，包括任务拆解、工具调用、状态管理、权限控制、失败恢复、评测反馈和人机协作接口等。它关注的是“如何把 agent 做成可用的工程系统”，因此既涉及模型能力，也涉及系统设计与工作流设计。
+
 ### 三者之间的关系
 
 - **AI coding** 是最广泛的上位概念
 - **Vibe Coding** 是 AI coding 中的一种交互范式，强调”人不需要完全理解生成代码”
 - **Coding Agent** 是 AI coding 的技术实现路径之一，强调”AI 能自主完成多步骤工程任务”
+- **Agentic Engineering** 更偏工程方法与系统构建，关注如何把 Coding Agent 做得可控、可靠、可复现
 - Vibe Coding 的体验往往依赖 Coding Agent 的能力，但两者关注点不同：前者关注人机交互方式，后者关注系统能力
 
 ### Harness Engineering

@@ -8,6 +8,8 @@
   适合快速发现最新 AI 论文与讨论热度。
 - [alphaXiv](https://www.alphaxiv.org/)
   适合在阅读 arXiv 论文时结合社区批注和讨论。
+- [Zotero](https://www.zotero.org/)
+  适合做论文收藏、分类、批注和引用管理，尤其适合实验室长期积累阅读清单与专题资料。
 
 ## 本页建议覆盖
 

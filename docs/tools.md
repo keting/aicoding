@@ -20,7 +20,7 @@
   OpenAI 的 AI coding partner，强调端到端完成工程任务，适合放在当前主流 Coding Agent 工具链里持续跟踪。
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
   GitHub 提供的命令行 Copilot 入口，适合和 GitHub 工作流、autopilot 模式、插件生态一起看。
-  对个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，可进行 300 次请求，性价比较高。
+  对学生/个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，每月可进行 300 次请求（单次对话内容token不计上限），性价比较高。
 
 ### 2. 热门开源 Agent / 专题工具
 

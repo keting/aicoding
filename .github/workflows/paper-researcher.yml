@@ -9,8 +9,8 @@ on:
         description: 'Investigated month in YYYY-MM. Defaults to the previous natural month.'
         required: false
         type: string
-  schedule:
-    - cron: '22 2 1 * *'
+  # schedule:
+  #   - cron: '22 2 1 * *'
 
 concurrency:
   group: ${{ github.workflow }}

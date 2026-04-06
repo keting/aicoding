@@ -199,6 +199,30 @@
   推荐语（by Opus 4.6）：★★★★✩
   多 Agent 软件开发方向最有影响力的系统之一。核心贡献是引入结构化通信协议（SOP），让 agent 之间用标准化文档而非自由文本交流，显著减少幻觉。直接对应“多 Agent 协作”研究方向。
 
+- [CAID: Centralized Asynchronous Isolated Delegation for Multi-Agent Coordination](https://arxiv.org/abs/2603.21489)（CoRR2026）
+  以 git worktree / commit / merge 等 git 原语作为并发协调原语，构建可靠的多 agent 分支并行框架，每个子 agent 在隔离分支上独立工作后由主 agent 合并。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  用 git 原语替代自定义并发机制，是将工程成熟工具引入 agent 协调的有洞察力的选择。在 PaperBench 上提升 26.7%，展示了异步隔离委托在复杂任务上的效果。
+
+- [OPENDEV: Terminal-Native Coding Agent](https://arxiv.org/abs/2603.05344)（CoRR2026）
+  用 Rust 实现的 CLI-first 开源 coding agent，采用双代理架构（规划与执行分离）、懒工具发现、自适应上下文压缩和跨会话自动记忆，是 terminal-native agent 工程设计的完整蓝图。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  针对 CLI-first 场景设计的完整工程蓝图，五个机制（模型路由/双代理/懒加载/渐进压缩/记忆持久化）协同解决上下文膨胀和推理退化，对构建生产级 terminal agent 有直接参考价值。
+
+- [SWE-Adept: Two-Agent Framework for Repository-Level Software Engineering](https://arxiv.org/abs/2603.01327)（CoRR2026）
+  双代理框架：Locator agent 使用 DFS 精准定位缺陷范围，Resolver agent 借助版本控制检查点进行迭代修复；结合版本感知的 context 管理策略。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  将定位精度作为核心设计目标，DFS 探索与版本控制检查点的组合是对 coding agent 两阶段流程的清晰工程化；在 SWE-bench Lite 和 Pro 上均有明显提升。
+
+- [RepoRepair: Documentation-Enhanced Repository-Level Program Repair](https://arxiv.org/abs/2603.01048)（CoRR2026）
+  层次化文档抽取（仓库→模块→函数）增强 bug 定位与修复；在 SWE-bench Lite 上达到 45.7%（$0.44/fix），SWE-bench Multimodal 37.1%。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  把文档作为一等上下文源，在性价比上有竞争力（$0.44/fix）。文档驱动的层次定位思路对理解仓库级修复的上下文构建策略有直接参考价值。
+
 ### 4. 上下文工程
 
 - [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618)（ICLR2026）
@@ -255,6 +279,12 @@
   推荐语（by Opus 4.6）：★★★★☆
   仓库级代码补全的代表工作，核心是“迭代检索 + 生成”。这正是上下文工程在编程场景的具体实践，先检索相关代码作上下文，生成后再检索更精准的片段。对理解 Coding Agent 如何从大型仓库中提取有效上下文有直接帮助。
 
+- [FastCode: Structural Scouting for Repository-Scale Reasoning](https://arxiv.org/abs/2603.01012)（CoRR2026）
+  将仓库级推理拆分为"轻量结构侦察"和"目标内容读取"两阶段；侦察阶段构建高价值摘要地图，避免全文遍历，显著降低 token 消耗并提升定位准确率。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  解耦探索与读取的思路切实解决了"读太多 vs. 读错了"的张力；在 SWE-QA、LOC-BENCH 和 GitTaskBench 上均表现领先，token 效率改善明显，是上下文工程在仓库级 agent 场景的精炼实践。
+
 ### 5. 安全与风险分析
 
 - [Is Vibe Coding Safe? Benchmarking Vulnerability of Agent-Generated Code in Real-World Tasks](https://arxiv.org/abs/2512.03262)（CoRR2025）
@@ -283,6 +313,18 @@
 
   推荐语（by Opus 4.6）：★★☆☆☆
   关注多 agent 防御 jailbreak 攻击，这是通用 LLM 安全领域的问题，与 AI Coding / Coding Agent 方向的关联性弱。除非专门做安全方向，否则优先级很低。
+
+- [How are AI Agents Used? Evidence from 177,000 MCP Tools](https://arxiv.org/abs/2603.23802)（CoRR2026）
+  对 2024-11 至 2026-02 期间 177,436 个公开 MCP 工具进行大规模生态监测，发现软件开发占所有工具的 67%；action 工具（直接修改外部环境）占比在 16 个月内从 27% 升至 65%，高风险操作（金融交易、物理执行）已出现。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  首个基于大规模 MCP 仓库监测的工具生态研究，将 agent 能力演化趋势量化为可验证数据。action 工具占比的快速上升揭示了 agent 系统向高后果操作扩张的现实风险，对安全边界设计和监管政策都有直接参考价值。
+
+- [Safer Builders, Risky Maintainers: A Comparative Study of Breaking Changes in Human vs Agentic PRs](https://arxiv.org/abs/2603.27524)（MSR2026）
+  对比 7,191 个 agent 生成 PR 与 1,402 个人类 PR（Python 仓库）：agent 在代码生成任务中 breaking change 率低于人类（3.45% vs 7.40%），但在维护任务（refactoring 6.72%、chore 9.35%）中风险显著更高；揭示"置信度陷阱"——高置信度 agent PR 仍频繁引入 breaking change。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  区分任务类型的实证发现具有直接工程意义：agent 不是在所有场景下都更安全，维护型任务需要更严格的人工审查策略。对企业级 AI 辅助开发的代码评审流程设计有实用参考价值。
 
 ### 6. 评测与基准
 
@@ -330,6 +372,54 @@
 
   推荐语（by Opus 4.6）：★★★☆☆
   把评测从”修 bug”扩展到”端到端构建 Web 应用”，方向有价值。但该工作很新，任务设计和评测指标的合理性尚未经社区充分检验，暂不建议作为核心参考，持续关注即可。
+
+- [SWE-ABS: Adversarial Test Augmentation for Benchmarking Coding Agents](https://arxiv.org/abs/2603.00520)（CoRR2026）
+  两阶段对抗测试增强框架：①覆盖驱动增强（程序切片锁定未覆盖区域补充测试用例）；②突变驱动对抗测试（合成"似是而非的错误补丁"）。对 SWE-Bench Verified 500 个实例，拒绝 19.71% 之前认为通过的补丁，顶级代理得分从 78.80% 降至 62.20%，原排名第一的代理跌至第五名。
+
+  推荐语（by GitHub Agent）：★★★★★
+  本月最重要的批评性工作。每 5 个"已解决"补丁中约有 1 个实际上是语义错误的，当前 SWE-Bench 测试套件质量不足以支撑高密度比较。所有基于 SWE-Bench 数值的系统对比研究都应在增强测试集上重验结论。
+
+- [BeyondSWE: Can Code Agents Survive Beyond Single-Repo Bug Fixing?](https://arxiv.org/abs/2603.03194)（CoRR2026）
+  将评测范围扩展至跨仓库推理、领域专业化和完整仓库生成（500 个真实实例）；所有前沿模型均在 45% 以下停滞，无一模型能在所有任务类型上持续良好表现。
+
+  推荐语（by GitHub Agent）：★★★★★
+  为研究者和企业提供了脱离 SWE-Bench 泡沫的视角：现有 coding agent 能力边界远窄于真实开发需求，即使顶级模型在跨仓库/全仓库场景下也暴露出明显短板。数据集和代码已开源。
+
+- [SlopCodeBench: Benchmarking Code Quality Degradation in Iterative Agent Tasks](https://arxiv.org/abs/2603.24755)（CoRR2026）
+  针对多轮迭代任务设计的代码质量退化基准：80% 的 agent 轨迹随迭代轮次出现结构侵蚀（圈复杂度/重复代码/可维护性指数恶化），揭示 agent 在迭代任务中逐步牺牲代码质量来维持功能通过率的系统性模式。
+
+  推荐语（by GitHub Agent）：★★★★★
+  把"功能通过率"之外的维度引入评测，揭示了一个在现有 benchmark 中完全不可见的退化现象：agent 代码质量在 vibe coding 式迭代中持续下滑。对 production 代码质量保障有直接警示意义。
+
+- [EnterpriseOps-Gym: Evaluating LLM Agents in Enterprise Operational Settings](https://arxiv.org/abs/2603.13594)（CoRR2026）
+  企业运营场景基准：164 张数据库表、512 个工具、1150 个多步骤任务，跨越财务/HR/供应链/CRM 等真实企业工作流。最强模型得分仅 37.4%，战略推理（序列决策和多领域协调）是核心瓶颈。
+
+  推荐语（by GitHub Agent）：★★★★★
+  填补了学术评测与企业实际落地之间的鸿沟。当前最强模型在真实企业工作流中仍不及 40%，而战略推理而非工具调用是制约性能的主要因素，对企业级 agent 部署决策有直接参考价值。
+
+- [SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration](https://arxiv.org/abs/2603.03823)（CoRR2026）
+  首个基于 CI 循环的 repo 级 benchmark：100 个任务覆盖平均 233 天开发历史，要求 agent 保持仓库在演化过程中持续通过 CI。评测维度从"单点修复"扩展至"长期可维护性"。
+
+  推荐语（by GitHub Agent）：★★★★★
+  将 benchmark 评测从"一次性 bug 修复"推进到"持续集成驱动的长期维护"，是对 agent 能力边界最贴近真实开发流程的测试范式之一。方向高度前瞻，应与 SWE-ABS 和 BeyondSWE 一并阅读构建完整评测视角。
+
+- [ToCS: Theory of Code Space for Benchmarking Architectural Belief Maintenance](https://arxiv.org/abs/2603.00601)（CoRR2026）
+  提出"架构信念维护"评测框架：衡量 agent 在多轮代码演化中是否能维持对代码库架构的一致性信念。揭示不同模型在"主动探索优势"和"信念崩溃"两个维度上的显著差异。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  把架构认知一致性作为 agent 能力的独立评测维度，填补了现有 benchmark 在认知层面的空白。"信念崩溃"现象的发现对理解 agent 在长程任务中的推理退化有直接价值。
+
+- [CodeTaste: Benchmarking Refactoring Capability of Coding Agents](https://arxiv.org/abs/2603.04177)（CoRR2026）
+  重构任务分层评测：代理能以 85%+ 准确率执行指定重构操作，但当要求代理自主判断是否应该重构、选择哪种重构方式时，与人类选择的重合度极低，揭示"执行力 vs. 判断力"的能力缺口。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  区分"被告知做什么"与"自主决定做什么"的评测框架，对理解 agent 重构能力的边界非常精准。当前 coding agent 更像执行工具而非有自主代码品味的开发者，对 vibe coding 和自动化重构工具的设计边界有直接启示。
+
+- [SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?](https://arxiv.org/abs/2603.15401)（CoRR2026）
+  对 49 个公开 SWE skill（推理时注入的结构化知识包）进行严格有/无配对评测（≈565 个任务实例）：39 个 skill 零通过率提升，平均增益仅 +1.2%；token overhead 最高增加 451%；仅 7 个专业化 skill 有实质收益（最高 +30%）；3 个 skill 因版本不匹配反而降低性能。
+
+  推荐语（by GitHub Agent）：★★★★☆
+  对 skill injection 的快速社区采用提供了严格的实证否定：这是一种窄干预，效用强依赖领域契合度和版本兼容性。在为 agent 配置 skill 之前，这篇的发现是必要的参考警示。
 
 ## 后续可补充内容
 

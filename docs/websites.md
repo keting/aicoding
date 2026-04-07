@@ -19,6 +19,8 @@
 - [Anthropic Claude 101](https://anthropic.skilljar.com/claude-101)
   Anthropic 提供的免费课程，适合作为实验室成员第一次系统接触 Claude 使用方式的入口。
 
+ - **[《高效的AI Coding学习路径》](https://www.bilibili.com/video/BV1Bq421A74G/)** - 一个很系统的大模型入门课程
+
 ### 3. 最佳实践
 
 - [Vibe Coding 指南（中文）](https://github.com/tukuaiai/vibe-coding-cn)

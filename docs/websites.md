@@ -26,6 +26,19 @@
 - [Vibe Coding 指南（中文）](https://github.com/tukuaiai/vibe-coding-cn)
   一个偏中文实践导向的 Vibe Coding 指南仓库，整理了入门路径、方法论、提示词、案例与工作流，适合作为持续参考的实践资料。
 
+### 5. 社区与聚合资源
+- [Latent Space](https://www.latent.space/)  
+  长期关注 AI 工程、Agent、模型生态与开发工具，适合作为行业趋势和开发者实践的订阅入口。
+- [Hugging Face](https://huggingface.co/)  
+  适合关注开源模型、代码模型、Agent 实验项目与社区实践。
+- [ai-coding-assistants（GitHub）](https://github.com/entrepeneur4lyf/ai-coding-assistants)  
+  一个关于 AI coding assistants 的资源聚合仓库，适合做扩展阅读和补充索引。
+- [Hacker News](https://news.ycombinator.com/)  
+  适合追踪 AI coding 工具发布、社区讨论与开发者反馈。
+- [Reddit](https://www.reddit.com/)  
+  适合查看实际使用反馈、踩坑经验与热点讨论，但信息噪声较大，建议作为补充来源。
+
+
 ## 本页建议覆盖
 
 - 官方主页

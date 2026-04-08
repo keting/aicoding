@@ -28,6 +28,10 @@
 - [OpenClaw 专题页](openclaw.md)
   OpenClaw 既可以被看作一个值得直接体验的开源 AI assistant / agent，也值得作为一个正在快速演化的热点项目持续跟踪，因此放在直接工具下面单独列出。
 
+### 3. IDE Coding Agents
+
+- [Antigravity](https://antigravity.google/) Google 推出的智能体 IDE（Agentic IDE），基于 VS Code 分支构建，不仅支持绝大部分 VS Code 插件，且支持多智能体并行协作、内置浏览器自动化测试、Artifacts 交付物与录屏验证。内置 Gemini 3.1 Pro，Claude Sonnet 4.5，Claude Opus 4.6 等模型。仅需登录谷歌账号即可使用，额度每周刷新，适合中等强度的开发工作。
+
 ## 扩展工具
 
 - [Mem0](https://github.com/mem0ai/mem0)

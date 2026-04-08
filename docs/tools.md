@@ -27,6 +27,8 @@
 
 - [OpenClaw 专题页](openclaw.md)
   OpenClaw 既可以被看作一个值得直接体验的开源 AI assistant / agent，也值得作为一个正在快速演化的热点项目持续跟踪，因此放在直接工具下面单独列出。
+- [happyCapy](https://happycapy.ai/)
+  happyCapy由 Trickle 团队推出的云端 AI Agent 原生计算机，它打破了传统 CLI 的限制，直接在浏览器中提供一个安全、隔离的 Linux 沙箱环境。其核心差异化在于“零配置”与“可视化”：用户无需在本地安装 Node.js 或配置环境变量，即可运行包括 Claude Code 在内的强大模型。它内置了海量的“技能商店”（Skill Store），覆盖从设计系统生成到数据处理的各种场景，支持用户通过自然语言直接调用。此外，happycapy 还支持多智能体协作（Agent Teams）和 Capymail 自动化工作流，允许 AI 在后台自主执行定时任务或将结果发送至邮箱，非常适合希望在不污染本地环境的前提下进行复杂工程任务或创意自动化的开发者。
 
 ## 扩展工具
 

@@ -14,12 +14,16 @@
 - [Kimi / Moonshot AI](https://www.moonshot.cn/)
 - [Qwen / 阿里云通义](https://qwenlm.github.io/)
 
-### 2. 学习课程
+### 3. 学习课程
 
 - [Anthropic Claude 101](https://anthropic.skilljar.com/claude-101)
   Anthropic 提供的免费课程，适合作为实验室成员第一次系统接触 Claude 使用方式的入口。
 - [Claude Code Book](https://github.com/lintsinghua/claude-code-book)
   Claude Code 架构深度剖析，15 章从对话循环到构建你自己的 Agent Harness。
+- [OpenAI Academy](https://academy.openai.com/)  
+  OpenAI 提供的学习资源入口，适合查找面向开发者和教育场景的官方材料。
+- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/)  
+  虽然不局限于 coding，但在 Agent、Prompt Engineering、LLM 应用搭建方面有较多高质量课程，适合作为补充学习路径。
 
 ### 3. 最佳实践
 

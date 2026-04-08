@@ -26,6 +26,16 @@
 - [Vibe Coding 指南（中文）](https://github.com/tukuaiai/vibe-coding-cn)
   一个偏中文实践导向的 Vibe Coding 指南仓库，整理了入门路径、方法论、提示词、案例与工作流，适合作为持续参考的实践资料。
 
+### 6. Benchmark / 评测参考页面
+- [SWE-bench](https://www.swebench.com/)  
+  当前最有代表性的 AI 软件工程 benchmark 之一，用于评估模型或 agent 在真实 GitHub issue 修复任务上的表现。
+- [LiveCodeBench](https://livecodebench.github.io/)  
+  面向代码生成与动态题目的常见 benchmark，适合观察模型在编程题场景中的能力变化。
+- [Terminal-Bench](https://www.tbench.ai/)  
+  偏终端任务与 agent 执行能力的 benchmark，适合观察工具使用、命令行操作与多步执行表现。
+- [Papers with Code](https://paperswithcode.com/)  
+  适合快速查看代码生成、程序合成、软件工程等相关任务与 leaderboard 的聚合入口。
+
 ## 本页建议覆盖
 
 - 官方主页

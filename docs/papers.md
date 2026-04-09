@@ -199,6 +199,12 @@
   推荐语（by Opus 4.6）：★★★★✩
   多 Agent 软件开发方向最有影响力的系统之一。核心贡献是引入结构化通信协议（SOP），让 agent 之间用标准化文档而非自由文本交流，显著减少幻觉。直接对应“多 Agent 协作”研究方向。
 
+- [Composer 2 Technical Report](https://arxiv.org/abs/2603.24477)（CoRR2026）
+  Cursor Research 发布的 agentic 软件工程专用 frontier 模型。核心训练方法：两阶段（继续预训练 + 大规模 RL），在与生产完全等价的 Cursor 部署 harness 环境中进行 RL 训练；引入 CursorBench 评测真实大型代码库上的 SWE 任务。SWE-bench Multilingual 73.7%，Terminal-Bench 61.7%。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  首个公开的 agentic SWE 专用 frontier 模型技术报告，核心价值在于展示了"在自身产品 harness 等价环境中做 RL"的训练范式——工具链、沙箱结构、评测环境与生产部署完全一致。作为技术报告，具体数字将被后续版本超越，但这种训练范式对理解如何构建 agent 专用模型具有持久参考价值。
+
 ### 4. 上下文工程
 
 - [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618)（ICLR2026）
@@ -254,6 +260,12 @@
 
   推荐语（by Opus 4.6）：★★★★☆
   仓库级代码补全的代表工作，核心是“迭代检索 + 生成”。这正是上下文工程在编程场景的具体实践，先检索相关代码作上下文，生成后再检索更精准的片段。对理解 Coding Agent 如何从大型仓库中提取有效上下文有直接帮助。
+
+- [FastCode: Structural Scouting for Repository-Scale Reasoning](https://arxiv.org/abs/2603.01012)（CoRR2026）
+  将仓库级推理拆分为"轻量结构侦察"和"目标内容读取"两阶段；侦察阶段构建高价值摘要地图，避免全文遍历，显著降低 token 消耗并提升定位准确率。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  将仓库级推理拆分为"轻量结构侦察"和"目标内容读取"两阶段，精准解决了"全文遍历 token 爆炸"与"盲目定位失准"之间的张力。在 SWE-QA、LOC-BENCH、GitTaskBench 三个基准上均表现领先且 token 效率显著改善，是上下文工程在仓库级 agent 场景的扎实实践。
 
 ### 5. 安全与风险分析
 
@@ -330,6 +342,36 @@
 
   推荐语（by Opus 4.6）：★★★☆☆
   把评测从”修 bug”扩展到”端到端构建 Web 应用”，方向有价值。但该工作很新，任务设计和评测指标的合理性尚未经社区充分检验，暂不建议作为核心参考，持续关注即可。
+
+- [SWE-ABS: Adversarial Test Augmentation for Benchmarking Coding Agents](https://arxiv.org/abs/2603.00520)（CoRR2026）
+  两阶段对抗测试增强框架：①覆盖驱动增强（程序切片锁定未覆盖区域补充测试用例）；②突变驱动对抗测试（合成"似是而非的错误补丁"）。对 SWE-Bench Verified 500 个实例，拒绝 19.71% 之前认为通过的补丁，顶级代理得分从 78.80% 降至 62.20%，原排名第一的代理跌至第五名。
+
+  推荐语（by Opus 4.6）：★★★★✩
+  对 SWE-bench——本方向事实评测标准——的可靠性提出系统性质疑：19.71% 的"已解决"补丁在对抗测试下暴露为语义错误，顶级 agent 排名发生实质性变化。两阶段框架（覆盖驱动增强 + 突变驱动对抗）方法论严谨，结论具有跨年持久性——只要 SWE-bench 仍是标准基准，这篇就是必要的修正参照。未给满分是因为它改进而非定义评测范式。
+
+- [BeyondSWE: Can Code Agents Survive Beyond Single-Repo Bug Fixing?](https://arxiv.org/abs/2603.03194)（CoRR2026）
+  将评测范围扩展至跨仓库推理、领域专业化和完整仓库生成（500 个真实实例）；所有前沿模型均在 45% 以下停滞，无一模型能在所有任务类型上持续良好表现。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  将 Coding Agent 评测从单仓 bug fix 扩展到跨仓库推理、领域专业化和完整仓库生成三个维度，500 个真实实例覆盖面扎实。所有前沿模型均在 45% 以下停滞的结论揭示了当前 agent 能力的天花板。填补了 SWE-bench 单仓范式之外的重要评测空白，方向先导价值高于具体数字。
+
+- [SlopCodeBench: Benchmarking Code Quality Degradation in Iterative Agent Tasks](https://arxiv.org/abs/2603.24755)（CoRR2026）
+  针对多轮迭代任务设计的代码质量退化基准：80% 的 agent 轨迹随迭代轮次出现结构侵蚀（圈复杂度/重复代码/可维护性指数恶化），揭示 agent 在迭代任务中逐步牺牲代码质量来维持功能通过率的系统性模式。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  揭示了现有评测体系的真实盲点——agent 在多轮迭代中系统性地牺牲代码质量来维持功能通过率。80% 的轨迹出现结构侵蚀（圈复杂度、重复代码、可维护性指数恶化）这一发现，对 vibe coding 范式下代码资产长期可维护性敲响警钟。将"功能正确之外的质量维度"引入 agent 评测，是现有 benchmark 的必要补充。
+
+- [SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration](https://arxiv.org/abs/2603.03823)（CoRR2026）
+  首个基于 CI 循环的 repo 级 benchmark：100 个任务覆盖平均 233 天开发历史，要求 agent 保持仓库在演化过程中持续通过 CI。评测维度从"单点修复"扩展至"长期可维护性"。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  将评测范式从一次性 bug 修复推进到 CI 驱动的长期可维护性——agent 不仅要修问题，还要在 233 天开发历史的持续演化中保持仓库 CI 通过。这是现有评测中罕见的"时间维度"要求。与 SWE-ABS（评测可靠性）和 BeyondSWE（任务类型扩展）配合阅读，可构建 SWE-bench 之后的完整评测视角。
+
+- [SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?](https://arxiv.org/abs/2603.15401)（CoRR2026）
+  对 49 个公开 SWE skill（推理时注入的结构化知识包）进行严格有/无配对评测（≈565 个任务实例）：39 个 skill 零通过率提升，平均增益仅 +1.2%；token overhead 最高增加 451%；仅 7 个专业化 skill 有实质收益（最高 +30%）；3 个 skill 因版本不匹配反而降低性能。
+
+  推荐语（by Opus 4.6）：★★★★☆
+  对 skill injection——当前社区快速采用的 agent 增强手段——给出了严格的实证否定：49 个公开 skill 中 39 个零提升，平均增益仅 +1.2%，token overhead 最高增加 451%。反直觉的负面结果具有类似 Agentless 的批判价值——挑战了"给 agent 更多知识就能提升表现"的朴素假设。在为 agent 配置 skill 之前是必要参照。
 
 ## 后续可补充内容
 

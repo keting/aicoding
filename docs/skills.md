@@ -23,6 +23,10 @@ Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，
 
 如果实验室后续想研究“如何把 Coding Agent 从能写代码，提升到更稳定地完成工程任务”，Superpowers 很值得跟踪。
 
+### 3. Antigravity Awesome Skills
+来源：GitHub 开源项目 https://github.com/sickn33/antigravity-awesome-skills
+目前规模最大、生态最完善的可安装式 Coding Agent 技能库，v9.11.0 版本收录 1397 + 社区验证的结构化技能，获 32k+ GitHub 星标。它将零散提示词标准化为统一SKILL.md格式，提供角色化技能包和端到端工程工作流，一键适配 Claude Code、Cursor、Copilot 等主流工具，是研究跨平台技能标准化与 Agent 工程化能力沉淀的代表性样本。
+
 ## 本页建议覆盖
 
 - skill 设计案例

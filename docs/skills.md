@@ -23,10 +23,6 @@ Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，
 
 如果实验室后续想研究”如何把 Coding Agent 从能写代码，提升到更稳定地完成工程任务”，Superpowers 很值得跟踪。
 
-### 3. 其他收录
-
-- _待补充_
-
 ## 本页建议覆盖
 
 - skill 设计案例

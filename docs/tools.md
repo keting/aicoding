@@ -75,6 +75,10 @@
 
 - [PromptUp](https://promptup.net/)
   一个提示语收集与浏览网站，适合在需要快速参考 prompt 写法、任务模板和表达方式时作为辅助入口使用。
+- [秒悟Meoo](https://ai-bot.cn/sites/75263.html)
+  阿里ATH事业群推出的对话式AI开发工具，通过自然语言描述需求即可
+  自动生成前后端完整的网站或H5页面，特色是**能自动生成 skill**， 
+  适合快速原型验证和零代码建站场景。  
 - [PromptPilot](https://promptpilot.volcengine.com/home?workspaceId=ws-20260408102547-h6a9V)
   字节跳动火山引擎提供的 AI 提示词管理平台，提供提示词版本管理、测试和协作功能。适合只有一个简单想法但不清楚如何实现的初步构想阶段使用，每周提供免费额度。
 

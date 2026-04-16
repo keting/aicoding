@@ -33,6 +33,8 @@
   OpenAI 官方示例与最佳实践资料，适合参考 API 调用、工作流设计、工具使用和工程化样例。
 - [GitHub Copilot Resources](https://resources.github.com/learn/pathways/copilot/)  
   适合查看真实开发场景中的 Copilot 使用方式、最佳实践和企业落地经验。
+- [Gemma 4](https://deepmind.google/models/gemma/gemma-4/)  
+  Google DeepMind 提供的 Gemma 4 官方页面，适合了解 Gemma 系列开放模型的能力定位、使用方式和相关资源入口，也可作为参考 Google 侧开源模型实践的起点。
 
 ## 本页建议覆盖
 

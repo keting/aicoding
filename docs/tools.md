@@ -15,126 +15,126 @@
 
 ### 1. CLI Coding Agents
 
-- [Claude Code](https://claude.com/product/claude-code)
-  Anthropic 的终端式 coding agent，强调本地运行、权限确认、与 IDE 和工作流结合。
-  **使用门槛：** 低。只需具备基础终端操作能力；需支付 Anthropic API 费用。
+- [Claude Code](https://claude.com/product/claude-code)<br>
+  Anthropic 的终端式 coding agent，强调本地运行、权限确认、与 IDE 和工作流结合。<br>
+  **使用门槛：** 低。只需具备基础终端操作能力；需支付 Anthropic API 费用。<br>
   **适用场景：** 快速重构整个代码库、自动修复测试用例、在不离开终端的情况下进行全库搜索与修改。
-- [Codex](https://openai.com/codex/)
-  OpenAI 的 AI coding partner，强调端到端完成工程任务，适合放在当前主流 Coding Agent 工具链里持续跟踪。
-  **使用门槛：** 中。通常作为底层能力，需通过 API 或集成工具调用，适合有工程搭建能力的开发者。
+- [Codex](https://openai.com/codex/)<br>
+  OpenAI 的 AI coding partner，强调端到端完成工程任务，适合放在当前主流 Coding Agent 工具链里持续跟踪。<br>
+  **使用门槛：** 中。通常作为底层能力，需通过 API 或集成工具调用，适合有工程搭建能力的开发者。<br>
   **适用场景：** 构建自定义的 AI 编程助手、进行大规模的代码自动转换或文档生成。
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
-  GitHub 提供的命令行 Copilot 入口，适合和 GitHub 工作流、autopilot 模式、插件生态一起看。
-  对学生/个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，每月可进行 300 次请求（单次对话内容token不计上限），性价比较高。
-  **使用门槛：** 极低。适合所有开发者，只需订阅 Copilot 服务，对习惯命令行的人极其友好。
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)<br>
+  GitHub 提供的命令行 Copilot 入口，适合和 GitHub 工作流、autopilot 模式、插件生态一起看。<br>
+  对学生/个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，每月可进行 300 次请求（单次对话内容token不计上限），性价比较高。<br>
+  **使用门槛：** 极低。适合所有开发者，只需订阅 Copilot 服务，对习惯命令行的人极其友好。<br>
   **适用场景：** 忘记 Git 命令或复杂的 Shell 指令时，通过自然语言快速执行系统操作。
-- [OpenCode](https://opencode.ai)
-  一款开源的终端 AI 编码助手。支持 GPT、Claude、Gemini、GLM 等多种模型；提供 Plan（仅分析）和 Build（实际修改）双模式；可集成到 VS Code、Cursor 等 IDE，并支持 MCP 扩展。分按量付费，Go 计划，自带模型三种付费模式。其中Go计划每月10\$（首月5\$），分每5h/周/月上限，不同模型可用额度不同，总体可适应中等强度开发。
-  GitHub 仓库：[sst/opencode](https://github.com/sst/opencode)
-  **使用门槛：** 中低。需具备基础终端操作能力或通过 IDE 集成使用，配置模型较为灵活。
+- [OpenCode](https://opencode.ai)<br>
+  一款开源的终端 AI 编码助手。支持 GPT、Claude、Gemini、GLM 等多种模型；提供 Plan（仅分析）和 Build（实际修改）双模式；可集成到 VS Code、Cursor 等 IDE，并支持 MCP 扩展。分按量付费，Go 计划，自带模型三种付费模式。其中Go计划每月10\$（首月5\$），分每5h/周/月上限，不同模型可用额度不同，总体可适应中等强度开发。<br>
+  GitHub 仓库：[sst/opencode](https://github.com/sst/opencode)<br>
+  **使用门槛：** 中低。需具备基础终端操作能力或通过 IDE 集成使用，配置模型较为灵活。<br>
   **适用场景：** 适合希望在终端或常用 IDE 中接入多种大模型进行中等强度日常开发与项目分析的开发者。
 
 ### 2. 热门开源 Agent / 专题工具
 
-- [OpenClaw 专题页](openclaw.md)
-  OpenClaw 既可以被看作一个值得直接体验的开源 AI assistant / agent，也值得作为一个正在快速演化的热点项目持续跟踪，因此放在直接工具下面单独列出。
-  **使用门槛：** 中高。需要自建环境或容器化部署（如 Docker），建议有一定系统运维经验。
+- [OpenClaw 专题页](openclaw.md)<br>
+  OpenClaw 既可以被看作一个值得直接体验的开源 AI assistant / agent，也值得作为一个正在快速演化的热点项目持续跟踪，因此放在直接工具下面单独列出。<br>
+  **使用门槛：** 中高。需要自建环境或容器化部署（如 Docker），建议有一定系统运维经验。<br>
   **适用场景：** 需要一个私有、可定制化程度极高的 AI 助手，且希望将 AI 能力深度集成到私有数据流中。
 
 ### 3. 代理型 IDE
 
-- [Cursor](https://www.cursor.com/)
-  AI 原生 IDE，其“Composer”模式支持跨文件同时编辑，能深度理解整个代码库的上下文。
-  **使用门槛：** 极低。开箱即用，VS Code 用户可无缝迁移。
+- [Cursor](https://www.cursor.com/)<br>
+  AI 原生 IDE，其“Composer”模式支持跨文件同时编辑，能深度理解整个代码库的上下文。<br>
+  **使用门槛：** 极低。开箱即用，VS Code 用户可无缝迁移。<br>
   **适用场景：** “Vibe Coding”的主战场。适合需要频繁跨文件修改、从零开始构建复杂功能模块的日常开发。
-- [Windsurf](https://codeium.com/windsurf)
-  Codeium 推出的下一代 IDE，其核心“Flow”特性让 AI 代理能像人类开发者一样，在理解代码、运行终端和修改文件之间无缝切换。
-  **使用门槛：** 极低。强调“流式”体验，适合追求极致流畅感的开发者。
+- [Windsurf](https://codeium.com/windsurf)<br>
+  Codeium 推出的下一代 IDE，其核心“Flow”特性让 AI 代理能像人类开发者一样，在理解代码、运行终端和修改文件之间无缝切换。<br>
+  **使用门槛：** 极低。强调“流式”体验，适合追求极致流畅感的开发者。<br>
   **适用场景：** 当你需要 Agent 拥有极高的自主权（如自动运行测试、自动根据报错纠错）而不仅是代码补全时。
-- [Trae](https://www.trae.ai/)
-  字节跳动推出的 AI 驱动 IDE，强调自适应学习和高效的代理模式，提供类似 Cursor 的流畅体验且目前对开发者非常友好。
-  **使用门槛：** 极低。国内开发者友好，网络环境要求相对宽松。
+- [Trae](https://www.trae.ai/)<br>
+  字节跳动推出的 AI 驱动 IDE，强调自适应学习和高效的代理模式，提供类似 Cursor 的流畅体验且目前对开发者非常友好。<br>
+  **使用门槛：** 极低。国内开发者友好，网络环境要求相对宽松。<br>
   **适用场景：** 适合希望在中文语境下获得高响应速度、且追求高性价比 AI 开发体验的团队。
-- [Google Antigravity](https://antigravity.google/)
-  Google 推出的智能体 IDE（Agentic IDE），基于 VS Code 分支构建，不仅支持绝大部分 VS Code 插件，且支持多智能体并行协作、内置浏览器自动化测试、Artifacts 交付物与录屏验证。内置 Gemini 3.1 Pro，Claude Sonnet 4.5，Claude Opus 4.6 等模型。仅需登录谷歌账号即可使用，额度每周刷新，适合中等强度的开发工作。
-  **使用门槛：** 中。全新的三窗格交互逻辑需要一定的学习适应成本。网络环境要求高。
+- [Google Antigravity](https://antigravity.google/)<br>
+  Google 推出的智能体 IDE（Agentic IDE），基于 VS Code 分支构建，不仅支持绝大部分 VS Code 插件，且支持多智能体并行协作、内置浏览器自动化测试、Artifacts 交付物与录屏验证。内置 Gemini 3.1 Pro，Claude Sonnet 4.5，Claude Opus 4.6 等模型。仅需登录谷歌账号即可使用，额度每周刷新，适合中等强度的开发工作。<br>
+  **使用门槛：** 中。全新的三窗格交互逻辑需要一定的学习适应成本。网络环境要求高。<br>
   **适用场景：** 处理极其复杂的系统性工程，通过多个异步 Agent 并行处理“规划-编码-测试”全链路。
 
 ### 4. 轻量级/插件级 Agent
 
-- [Roo Code (原 Cline)](https://github.com/RooCode/Roo-Code)
-  一个VS Code 开源插件，赋予 AI 读写本地文件、执行终端命令及使用浏览器的权限。
-  **使用门槛：** 中。需自行配置 API Key，且需要理解 Agent 的权限管理机制。
+- [Roo Code (原 Cline)](https://github.com/RooCode/Roo-Code)<br>
+  一个VS Code 开源插件，赋予 AI 读写本地文件、执行终端命令及使用浏览器的权限。<br>
+  **使用门槛：** 中。需自行配置 API Key，且需要理解 Agent 的权限管理机制。<br>
   **适用场景：** 不想更换 IDE，但希望在 VS Code 内部获得类似独立 Agent 的自主文件操作和浏览器联动能力。
-- [Aider](https://aider.chat/)
-  专注于终端的命令行编程助手，擅长在现有 Git 仓库中进行复杂的重构和功能开发，并能自动生成精简的 Commit Message。
-  **使用门槛：** 中。纯命令行交互，适合习惯“极简主义”和高效 Git 工作流的资深程序员。
+- [Aider](https://aider.chat/)<br>
+  专注于终端的命令行编程助手，擅长在现有 Git 仓库中进行复杂的重构和功能开发，并能自动生成精简的 Commit Message。<br>
+  **使用门槛：** 中。纯命令行交互，适合习惯“极简主义”和高效 Git 工作流的资深程序员。<br>
   **适用场景：** 在现有的复杂 Git 项目中进行精准的局部修复或功能迭代，且需要完美的版本控制记录。
-- [Github Copilot](https://github.com/features/copilot)
-  Copilot 的工作地点是你的 GitHub、IDE、项目工具、聊天应用和自定义 MCP 服务器。
-  **使用门槛：** 极低。标准化的行业标杆，订阅即用。
+- [Github Copilot](https://github.com/features/copilot)<br>
+  Copilot 的工作地点是你的 GitHub、IDE、项目工具、聊天应用和自定义 MCP 服务器。<br>
+  **使用门槛：** 极低。标准化的行业标杆，订阅即用。<br>
   **适用场景：** 广泛的日常编码辅助、标准库查询、以及在 GitHub 生态（如 Codespaces）中的原生体验。
 
 ## 扩展工具
 
-- [Mem0](https://github.com/mem0ai/mem0)
-  为 AI agent 提供持久化记忆层，支持跨会话的上下文记忆管理，适合在 Coding Agent 工作流中保持项目理解的连续性。
-  **使用门槛：** 中高。需集成到 Agent 的代码逻辑中，适合开发者。
+- [Mem0](https://github.com/mem0ai/mem0)<br>
+  为 AI agent 提供持久化记忆层，支持跨会话的上下文记忆管理，适合在 Coding Agent 工作流中保持项目理解的连续性。<br>
+  **使用门槛：** 中高。需集成到 Agent 的代码逻辑中，适合开发者。<br>
   **适用场景：** 解决 Agent “转头就忘”的问题，让你的编程助手记住你的代码风格和历史偏好。
-- [Spec Kit](https://github.com/github/spec-kit)
-  GitHub 开源的规范驱动开发（Spec-Driven Development）工具包，通过 `/specify`、`/plan`、`/tasks`、`/implement` 等命令，将模糊需求转化为结构化的规格文档和技术方案，再由 AI coding agents 落地为代码。强调“先文档后实现”，适合需要规范流程、多人协作或长期维护的项目。
-  **使用门槛：** 中。需要团队认同“先文档后代码”的开发文化。
+- [Spec Kit](https://github.com/github/spec-kit)<br>
+  GitHub 开源的规范驱动开发（Spec-Driven Development）工具包，通过 `/specify`、`/plan`、`/tasks`、`/implement` 等命令，将模糊需求转化为结构化的规格文档和技术方案，再由 AI coding agents 落地为代码。强调“先文档后实现”，适合需要规范流程、多人协作或长期维护的项目。<br>
+  **使用门槛：** 中。需要团队认同“先文档后代码”的开发文化。<br>
   **适用场景：** 严谨的工程项目。防止 Agent 瞎写，通过规范化的任务拆解确保 AI 生成的代码符合工程标准。
-- [MCP (Model Context Protocol)](https://modelcontextprotocol.io/)
-  由 Anthropic 发起的开放标准，允许 AI 工具通过统一接口接入本地数据、Google Drive、GitHub 等外部上下文，极大地扩展了 Agent 的知识边界。
-  **使用门槛：** 高。需要理解协议规范，甚至需要自建 MCP 服务器。
+- [MCP (Model Context Protocol)](https://modelcontextprotocol.io/)<br>
+  由 Anthropic 发起的开放标准，允许 AI 工具通过统一接口接入本地数据、Google Drive、GitHub 等外部上下文，极大地扩展了 Agent 的知识边界。<br>
+  **使用门槛：** 高。需要理解协议规范，甚至需要自建 MCP 服务器。<br>
   **适用场景：** 需要让 AI “看见”你的本地数据库、Google Calendar 或其他不直接联网的私有工具时。
-- [Greptile](https://www.greptile.com/)
-  为超大型代码库提供 API 级的语义搜索和理解，让你的 Coding Agent 能够瞬间掌握数十万行代码的架构关系。
-  **使用门槛：** 中。主要面向中大型企业级代码库。
+- [Greptile](https://www.greptile.com/)<br>
+  为超大型代码库提供 API 级的语义搜索和理解，让你的 Coding Agent 能够瞬间掌握数十万行代码的架构关系。<br>
+  **使用门槛：** 中。主要面向中大型企业级代码库。<br>
   **适用场景：** 面对百万行以上的陈旧代码库，需要 AI 快速定位逻辑关系或进行大规模影响分析。
-- [Plandex](https://github.com/plandex-ai/plandex)
-  专门处理复杂积压任务的 AI 任务管理器，能将大型工程目标拆解为细小的步骤，并跨多个文件进行原子级的代码生成。
-  **使用门槛：** 中。涉及长任务管理和状态回滚的逻辑理解。
+- [Plandex](https://github.com/plandex-ai/plandex)<br>
+  专门处理复杂积压任务的 AI 任务管理器，能将大型工程目标拆解为细小的步骤，并跨多个文件进行原子级的代码生成。<br>
+  **使用门槛：** 中。涉及长任务管理和状态回滚的逻辑理解。<br>
   **适用场景：** 应对那些需要连续修改几十个文件、且不能出错的长期复杂任务。
 
 ## 辅助工具
 
 ### 1. 终端与会话管理
 
-- [tmux](https://github.com/tmux/tmux)
-  对长期运行 agent、远程服务器开发、多会话协作非常实用。至少建议掌握：`tmux new -s <name>`、`tmux attach -t <name>`、`tmux ls`、`Ctrl-b d`、`tmux kill-session -t <name>`。
-  **使用门槛：** 低。需记快捷键。
+- [tmux](https://github.com/tmux/tmux)<br>
+  对长期运行 agent、远程服务器开发、多会话协作非常实用。至少建议掌握：`tmux new -s <name>`、`tmux attach -t <name>`、`tmux ls`、`Ctrl-b d`、`tmux kill-session -t <name>`。<br>
+  **使用门槛：** 低。需记快捷键。<br>
   **适用场景：** 远程服务器跑 Agent、多任务终端并排监控。
-- [Warp](https://www.warp.dev/)
-  集成了 AI 能力的现代终端，支持自然语言转命令、报错自动修复，并能将复杂的运维指令序列保存为团队共享的流程。
-  **使用门槛：** 低。Warp 像普通软件一样好用。
+- [Warp](https://www.warp.dev/)<br>
+  集成了 AI 能力的现代终端，支持自然语言转命令、报错自动修复，并能将复杂的运维指令序列保存为团队共享的流程。<br>
+  **使用门槛：** 低。Warp 像普通软件一样好用。<br>
   **适用场景：**将常用 AI 指令保存为快捷工作流。
 
 ### 2. 远程与移动端协作
 
-- [Happy Coder](https://happy.engineering/docs/)
-  一个面向 Claude Code、Codex 等 AI coding agents 的移动端与远程控制工具，适合“离开工位后继续看 agent 在做什么”这类场景。
-  **使用门槛：** 低。简单的远程接入配置。
+- [Happy Coder](https://happy.engineering/docs/)<br>
+  一个面向 Claude Code、Codex 等 AI coding agents 的移动端与远程控制工具，适合“离开工位后继续看 agent 在做什么”这类场景。<br>
+  **使用门槛：** 低。简单的远程接入配置。<br>
   **适用场景：** 当你在外面吃火锅，但想用手机看看家里电脑上的 Agent 代码写到哪一步了。
 
 ### 3. 自建中转站
 
-- [Sub2API](https://github.com/Wei-Shaw/sub2api)
-  一个面向订阅额度分发与 API Key 管理的 AI API gateway platform，强调多账户管理、鉴权计费、负载调度、并发控制和管理面板，适合作为 Claude Code、Codex、Gemini 等上层工具的模型接入层。
-  **使用门槛：** 高。需要具备服务器运维、数据库配置能力，并熟悉 API 鉴权与计费逻辑。
+- [Sub2API](https://github.com/Wei-Shaw/sub2api)<br>
+  一个面向订阅额度分发与 API Key 管理的 AI API gateway platform，强调多账户管理、鉴权计费、负载调度、并发控制和管理面板，适合作为 Claude Code、Codex、Gemini 等上层工具的模型接入层。<br>
+  **使用门槛：** 高。需要具备服务器运维、数据库配置能力，并熟悉 API 鉴权与计费逻辑。<br>
   **适用场景：** 团队级或多账户模型管理。适合作为 Claude Code 或 Gemini 等工具的底层接入层，实现额度分发与并发控制。
-- [One API](https://github.com/songquanpeng/one-api)
-  一个较有代表性的通用大模型聚合网关，强调通过 OpenAI 兼容接口统一接入多家模型服务，适合用来理解“模型聚合与统一 API 暴露”这一类系统。
-  **使用门槛：** 中高。需要自建服务环境，适合对“模型聚合”有一定技术理解的开发者。
+- [One API](https://github.com/songquanpeng/one-api)<br>
+  一个较有代表性的通用大模型聚合网关，强调通过 OpenAI 兼容接口统一接入多家模型服务，适合用来理解“模型聚合与统一 API 暴露”这一类系统。<br>
+  **使用门槛：** 中高。需要自建服务环境，适合对“模型聚合”有一定技术理解的开发者。<br>
   **适用场景：** 通用开发场景。当你需要通过单一的 OpenAI 兼容接口，统一调用来自不同供应商的多家大模型服务时。
-- [One Hub](https://github.com/MartialBE/one-hub)
-  一个基于 `one-api` 演化的增强分支，强调新的 UI、供应商管理、监控统计、价格更新和多供应商支持，适合关注面板与运维能力增强的读者继续跟踪。
-  **使用门槛：** 中高。在 One API 的基础上增加了更多管理特性，运维复杂度略有提升。
+- [One Hub](https://github.com/MartialBE/one-hub)<br>
+  一个基于 `one-api` 演化的增强分支，强调新的 UI、供应商管理、监控统计、价格更新和多供应商支持，适合关注面板与运维能力增强的读者继续跟踪。<br>
+  **使用门槛：** 中高。在 One API 的基础上增加了更多管理特性，运维复杂度略有提升。<br>
   **适用场景：** 强运维与监控需求场景。适合对面板 UI 美观度、实时监控统计以及多供应商价格更新有更高要求的用户。
-- [Claude Relay Service](https://github.com/Wei-Shaw/claude-relay-service)
-  一个面向 Claude 访问场景的专项 relay 服务，强调多账户管理、Claude API 中转与自建部署；其 README 中也提示新项目可优先关注 `sub2api` 这一代方案。
-  **使用门槛：** 中。专项中转服务，部署相对聚焦，但目前该项目更推荐迁移至功能更全的 Sub2API。
+- [Claude Relay Service](https://github.com/Wei-Shaw/claude-relay-service)<br>
+  一个面向 Claude 访问场景的专项 relay 服务，强调多账户管理、Claude API 中转与自建部署；其 README 中也提示新项目可优先关注 `sub2api` 这一代方案。<br>
+  **使用门槛：** 中。专项中转服务，部署相对聚焦，但目前该项目更推荐迁移至功能更全的 Sub2API。<br>
   **适用场景：** 专注 Claude 的特定中转需求。适合早期已部署该方案，或仅需针对 Claude API 进行简单中转与自建部署的场景。
 
 | **工具/平台类型**   | **代表工具**   | **核心功能**                                 | **维护成本** | **适用对象**                              |
@@ -148,78 +148,78 @@
 
 以下是国内外主流的大模型 API 中转/聚合平台，提供统一接口访问多家模型，通常按 token 计费，无需自建网关。
 
-- [OpenRouter](https://openrouter.ai/)
-  目前最主流的海外中转平台，统一 OpenAI 兼容接口接入 Claude、GPT、Gemini、Llama 等数百个模型，按量计费，支持 fallback 和模型路由。
-  **使用门槛：** 极低。注册账号充值即可。
+- [OpenRouter](https://openrouter.ai/)<br>
+  目前最主流的海外中转平台，统一 OpenAI 兼容接口接入 Claude、GPT、Gemini、Llama 等数百个模型，按量计费，支持 fallback 和模型路由。<br>
+  **使用门槛：** 极低。注册账号充值即可。<br>
   **适用场景：** 想低成本尝试各种新模型，无需自己维护多个平台账号。
-- [硅基流动 SiliconFlow](https://siliconflow.cn/)
-  国内主流中转平台，接入通义、GLM、DeepSeek、Llama 等模型，提供 OpenAI 兼容 API，部分开源模型有免费额度。
-  **使用门槛：** 极低。注册账号充值即可。
+- [硅基流动 SiliconFlow](https://siliconflow.cn/)<br>
+  国内主流中转平台，接入通义、GLM、DeepSeek、Llama 等模型，提供 OpenAI 兼容 API，部分开源模型有免费额度。<br>
+  **使用门槛：** 极低。注册账号充值即可。<br>
   **适用场景：** 想低成本尝试各种新模型，无需自己维护多个平台账号。
 
 ### 5. 提示词与内容辅助
 
-- [PromptUp](https://promptup.net/)
-  一个提示语收集与浏览网站，适合在需要快速参考 prompt 写法、任务模板和表达方式时作为辅助入口使用。
-  **使用门槛：** 极低。网页端直接访问，无技术背景要求。
+- [PromptUp](https://promptup.net/)<br>
+  一个提示语收集与浏览网站，适合在需要快速参考 prompt 写法、任务模板和表达方式时作为辅助入口使用。<br>
+  **使用门槛：** 极低。网页端直接访问，无技术背景要求。<br>
   **适用场景：** 灵感激发。适合在编写 Coding Agent 的系统提示词、任务模板或复杂 Prompt 时作为参考入口。
-- [秒悟Meoo](https://ai-bot.cn/sites/75263.html)
-  阿里ATH事业群推出的对话式AI开发工具，通过自然语言描述需求即可自动生成前后端完整的网站或H5页面，特色是**能自动生成 skill**，适合快速原型验证和零代码建站场景。
-  **使用门槛：** 极低。全自然语言交互，无需编程基础（零代码）。
+- [秒悟Meoo](https://ai-bot.cn/sites/75263.html)<br>
+  阿里ATH事业群推出的对话式AI开发工具，通过自然语言描述需求即可自动生成前后端完整的网站或H5页面，特色是**能自动生成 skill**，适合快速原型验证和零代码建站场景。<br>
+  **使用门槛：** 极低。全自然语言交互，无需编程基础（零代码）。<br>
   **适用场景：** 快速原型验证、营销活动 H5 搭建以及非技术人员从零开始构建展示型网站。
-- [PromptPilot](https://promptpilot.volcengine.com/home?workspaceId=ws-20260408102547-h6a9V)
-  字节跳动火山引擎提供的 AI 提示词管理平台，提供提示词版本管理、测试和协作功能。适合只有一个简单想法但不清楚如何实现的初步构想阶段使用，每周提供免费额度。
-  **使用门槛：** 低。友好的 Web 界面，无需代码能力即可进行提示词调试与管理。
+- [PromptPilot](https://promptpilot.volcengine.com/home?workspaceId=ws-20260408102547-h6a9V)<br>
+  字节跳动火山引擎提供的 AI 提示词管理平台，提供提示词版本管理、测试和协作功能。适合只有一个简单想法但不清楚如何实现的初步构想阶段使用，每周提供免费额度。<br>
+  **使用门槛：** 低。友好的 Web 界面，无需代码能力即可进行提示词调试与管理。<br>
   **适用场景：** 团队协作打磨和管理复杂的提示词版本，或在项目早期构想阶段通过提示词验证想法。
 
 ### 6. 前端界面
 
-- [pretext](https://github.com/chenglou/pretext)
-  高性能纯 TypeScript 文本布局引擎，它通过在 Canvas 中预先测量文本来完全绕过 DOM 布局回流（Reflow），从而在支持多语言复杂排版的同时，实现比传统方案快数百倍的跨端文本渲染性能。
-  **使用门槛：** 极高（开发侧）。仅建议 UI 开发或底层引擎开发人员关注。
+- [pretext](https://github.com/chenglou/pretext)<br>
+  高性能纯 TypeScript 文本布局引擎，它通过在 Canvas 中预先测量文本来完全绕过 DOM 布局回流（Reflow），从而在支持多语言复杂排版的同时，实现比传统方案快数百倍的跨端文本渲染性能。<br>
+  **使用门槛：** 极高（开发侧）。仅建议 UI 开发或底层引擎开发人员关注。<br>
   **适用场景：** 构建高性能、零闪烁的 AI 对话界面，追求极致的渲染效率。
 
 ### 7. 模型快捷调用
 
-- [Continue](https://www.continue.dev/)
-  灵活的开源 IDE 插件，支持在侧边栏自由接入任何本地（如 Ollama）或云端模型，是构建自定义 AI 工作流的首选支撑工具。
-  **使用门槛：** 低。极具灵活性的插件。
+- [Continue](https://www.continue.dev/)<br>
+  灵活的开源 IDE 插件，支持在侧边栏自由接入任何本地（如 Ollama）或云端模型，是构建自定义 AI 工作流的首选支撑工具。<br>
+  **使用门槛：** 低。极具灵活性的插件。<br>
   **适用场景：** 想要白嫖本地模型（如 Ollama 跑的 Llama 3）来辅助写代码，或频繁切换不同云端模型。
 
 ## 科研工具
 
 ### 1. 论文发现
 
-- [Hugging Face Papers](https://huggingface.co/papers)
-  适合快速发现最新 AI 论文，按社区讨论热度排序，更新频率高。
-  **使用门槛：** 极低。只需关注社区动态，无需深厚的学术功底即可快速浏览。
+- [Hugging Face Papers](https://huggingface.co/papers)<br>
+  适合快速发现最新 AI 论文，按社区讨论热度排序，更新频率高。<br>
+  **使用门槛：** 极低。只需关注社区动态，无需深厚的学术功底即可快速浏览。<br>
   **适用场景：** 紧跟技术前沿。适合每天花几分钟快速筛选当前 AI 社区讨论热度最高的论文，捕捉 Vibe Coding 相关的技术趋势。
 
 ### 2. 文献阅读与管理
 
-- [Zotero](https://www.zotero.org/)
-  常用的文献管理工具，适合论文收藏、分类、批注和引用管理，尤其适合实验室长期积累阅读清单与专题资料。
-  **使用门槛：** 低。学术圈通用工具。
+- [Zotero](https://www.zotero.org/)<br>
+  常用的文献管理工具，适合论文收藏、分类、批注和引用管理，尤其适合实验室长期积累阅读清单与专题资料。<br>
+  **使用门槛：** 低。学术圈通用工具。<br>
   **适用场景：** 建立自己的“AI Agent 论文仓库”，在阅读时参考全球开发者对该算法的实时评价。
-- [alphaXiv](https://www.alphaxiv.org/)
-  在 arXiv 论文页面上叠加社区批注和讨论，适合在阅读时获取他人观点和重点标注。
-  **使用门槛：** 低。学术圈通用工具。
+- [alphaXiv](https://www.alphaxiv.org/)<br>
+  在 arXiv 论文页面上叠加社区批注和讨论，适合在阅读时获取他人观点和重点标注。<br>
+  **使用门槛：** 低。学术圈通用工具。<br>
   **适用场景：** 建立自己的“AI Agent 论文仓库”，在阅读时参考全球开发者对该算法的实时评价。
-- [NotebookLM](https://notebooklm.google.com/)
-  Google 提供的 AI 文献阅读助手，可以上传论文 PDF 后进行问答、摘要和交叉对比，适合快速理解长论文或同时消化多篇相关工作。
-  **使用门槛：** 极低。傻瓜式操作。
+- [NotebookLM](https://notebooklm.google.com/)<br>
+  Google 提供的 AI 文献阅读助手，可以上传论文 PDF 后进行问答、摘要和交叉对比，适合快速理解长论文或同时消化多篇相关工作。<br>
+  **使用门槛：** 极低。傻瓜式操作。<br>
   **适用场景：** 手里攥着 20 篇 Agent 论文没时间读，通过它快速总结这些论文是否提到了同一种优化思路。
-- [Consensus](https://consensus.app/)
-  专为学术研究设计的 AI 搜索引擎，能从数亿篇同行评审论文中直接提取结论，非常适合在进行底层算法调研时快速验证技术可行性。
-  **使用门槛：** 低。订阅制或部分免费。
+- [Consensus](https://consensus.app/)<br>
+  专为学术研究设计的 AI 搜索引擎，能从数亿篇同行评审论文中直接提取结论，非常适合在进行底层算法调研时快速验证技术可行性。<br>
+  **使用门槛：** 低。订阅制或部分免费。<br>
   **适用场景：** 寻找技术支撑。
-- [Elicit](https://elicit.com/)
-  科研全流程助手，支持自动提取论文的关键数据（如样本量、方法论），并能通过语义关联发现你遗漏的相关文献。
-  **使用门槛：** 低。订阅制或部分免费。
+- [Elicit](https://elicit.com/)<br>
+  科研全流程助手，支持自动提取论文的关键数据（如样本量、方法论），并能通过语义关联发现你遗漏的相关文献。<br>
+  **使用门槛：** 低。订阅制或部分免费。<br>
   **适用场景：** 寻找技术支撑。
-- [Semantic Scholar](https://www.semanticscholar.org/)
-  由 AI 驱动的文献库，其“TLDR”功能能为你提供论文的极简摘要，帮助在海量新论文中快速筛选出对 Vibe Coding 有启发的研究。
-  **使用门槛：** 低。订阅制或部分免费。
+- [Semantic Scholar](https://www.semanticscholar.org/)<br>
+  由 AI 驱动的文献库，其“TLDR”功能能为你提供论文的极简摘要，帮助在海量新论文中快速筛选出对 Vibe Coding 有启发的研究。<br>
+  **使用门槛：** 低。订阅制或部分免费。<br>
   **适用场景：** 寻找技术支撑。
 
 ## 后续可补充内容

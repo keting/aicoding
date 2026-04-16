@@ -16,10 +16,12 @@
 
 ### 2. 学习课程
 
-- [Anthropic Claude 101](https://anthropic.skilljar.com/claude-101)
-  Anthropic 提供的免费课程，适合作为实验室成员第一次系统接触 Claude 使用方式的入口。
-- [Claude Code Book](https://github.com/lintsinghua/claude-code-book)
-  Claude Code 架构深度剖析，15 章从对话循环到构建你自己的 Agent Harness。
+- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/)  
+  提供较多与 LLM、Agent、Prompt Engineering 相关的短课程，适合作为补充学习资源。
+- [Hugging Face Course](https://huggingface.co/learn/nlp-course/chapter1/1)  
+  适合系统学习 Transformer、NLP 基础和开源模型生态，可作为理解 LLM 应用链路的入门资料。
+- [LangChain Academy](https://academy.langchain.com/)  
+  适合学习 LLM application、RAG、Agent 和 workflow 的基本构建方式。
 - [LLM](https://www.bilibili.com/video/BV1Bq421A74G?t=27.8)
   吴恩达大模型系列课程。
 

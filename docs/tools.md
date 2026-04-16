@@ -22,6 +22,10 @@
 - [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
   GitHub 提供的命令行 Copilot 入口，适合和 GitHub 工作流、autopilot 模式、插件生态一起看。
   对学生/个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，每月可进行 300 次请求（单次对话内容token不计上限），性价比较高。
+- [OpenCode](https://opencode.ai)
+  一款开源的终端 AI 编码助手，支持在命令行中与 AI 对话完成代码编写、调试、重构等任务。兼容 OpenAI、Anthropic、Google 等多模型；提供 Plan（仅分析）和 Build（实际修改）双模式；可集成到 VS Code、Cursor 等 IDE，并支持 MCP 扩展。  
+  
+  GitHub 仓库：[sst/opencode](https://github.com/sst/opencode)
 
 ### 2. 热门开源 Agent / 专题工具
 

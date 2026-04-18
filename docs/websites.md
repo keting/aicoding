@@ -13,6 +13,8 @@
 - [MiniMax](https://www.minimax.io/)
 - [Kimi / Moonshot AI](https://www.moonshot.cn/)
 - [Qwen / 阿里云通义](https://qwenlm.github.io/)
+- [Gemma 4](https://deepmind.google/models/gemma/gemma-4/)  
+  Google DeepMind 提供的 Gemma 4 官方页面，适合了解 Gemma 系列开放模型的能力定位、使用方式和相关资源入口，也可作为参考 Google 侧开源模型实践的起点。
 
 ### 2. 学习课程
 

@@ -13,7 +13,25 @@
 - [MiniMax](https://www.minimax.io/)
 - [Kimi / Moonshot AI](https://www.moonshot.cn/)
 - [Qwen / 阿里云通义](https://qwenlm.github.io/)
+- [Gemma 4](https://deepmind.google/models/gemma/gemma-4/)  
+  Google DeepMind 提供的 Gemma 4 官方页面，适合了解 Gemma 系列开放模型的能力定位、使用方式和相关资源入口，也可作为参考 Google 侧开源模型实践的起点。
 
+### 2. 官方文档与开发平台
+- [Anthropic Docs](https://docs.anthropic.com/)  
+  Anthropic 官方文档，包含 Claude API、工具调用、提示词、Agent 与 Claude Code 相关资料，是 Claude 生态最重要的一手资料入口。
+- [OpenAI Platform Docs](https://platform.openai.com/docs/)  
+  OpenAI 官方开发文档，适合查看 API、Agents/Responses、工具调用、模型说明和示例。
+- [Google AI for Developers / Gemini Docs](https://ai.google.dev/)  
+  Google 官方开发者入口，适合查看 Gemini API、示例、SDK 和多模态能力说明。
+- [OpenRouter Docs](https://openrouter.ai/docs)  
+  常用模型聚合调用平台文档，适合比较不同模型、快速切换模型进行 coding 场景实验。
+- [GitHub Copilot Docs](https://docs.github.com/en/copilot)  
+  GitHub Copilot 官方文档，适合了解 IDE 集成、CLI、代码补全、Chat、Agent 工作流和企业配置。
+- [LangChain Docs](https://docs.langchain.com/)  
+  LangChain 官方文档，适合参考 LLM application、RAG、Agent 和 workflow 的常见工程模式。
+- [LangGraph Docs](https://docs.langchain.com/langgraph/)  
+  LangGraph 官方文档，适合参考多步骤 agent、状态管理与工作流编排的实践方式。
+  
 ### 3. 学习课程
 
 - [Anthropic Claude 101](https://anthropic.skilljar.com/claude-101)
@@ -24,12 +42,26 @@
   OpenAI 提供的学习资源入口，适合查找面向开发者和教育场景的官方材料。
 - [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/)  
   虽然不局限于 coding，但在 Agent、Prompt Engineering、LLM 应用搭建方面有较多高质量课程，适合作为补充学习路径。
-
-### 3. 最佳实践
+- [LangChain Academy](https://academy.langchain.com/)  
+  适合学习 LLM application、RAG、Agent 和 workflow 的基本构建方式。
+- [Hugging Face Course](https://huggingface.co/learn/nlp-course/chapter1/1)  
+  适合系统学习 Transformer、NLP 基础和开源模型生态，可作为理解 LLM 应用链路的入门资料。
+- [DeepLearning.AI Short Courses](https://www.deeplearning.ai/short-courses/)  
+  提供较多与 LLM、Agent、Prompt Engineering 相关的短课程，适合作为补充学习资源。
+- [LLM](https://www.bilibili.com/video/BV1Bq421A74G?t=27.8)
+  吴恩达大模型系列课程。
+  
+### 4. 最佳实践
 
 - [Vibe Coding 指南（中文）](https://github.com/tukuaiai/vibe-coding-cn)
   一个偏中文实践导向的 Vibe Coding 指南仓库，整理了入门路径、方法论、提示词、案例与工作流，适合作为持续参考的实践资料。
-
+- [Anthropic Prompt Library](https://docs.anthropic.com/en/prompt-library/overview)  
+  适合理解 Claude 在编码、写作、分析等任务中的提示词组织方式。
+- [OpenAI Cookbook](https://cookbook.openai.com/)  
+  OpenAI 官方示例与最佳实践资料，适合参考 API 调用、工作流设计、工具使用和工程化样例。
+- [GitHub Copilot Resources](https://resources.github.com/learn/pathways/copilot/)  
+  适合查看真实开发场景中的 Copilot 使用方式、最佳实践和企业落地经验。
+  
 ## 本页建议覆盖
 
 - 官方主页

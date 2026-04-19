@@ -34,7 +34,7 @@
   为 AI agent 提供持久化记忆层，支持跨会话的上下文记忆管理，适合在 Coding Agent 工作流中保持项目理解的连续性。
 - [Spec Kit](https://github.com/github/spec-kit)
   GitHub 开源的规范驱动开发（Spec-Driven Development）工具包，通过 `/specify`、`/plan`、`/tasks`、`/implement` 等命令，将模糊需求转化为结构化的规格文档和技术方案，再由 AI coding agents 落地为代码。强调“先文档后实现”，适合需要规范流程、多人协作或长期维护的项目。
-- [Happycapy](https://happycapy.ai/app))
+- [Happycapy](https://happycapy.ai/app)
   happyCapy 是一类云端 AI coding / sandbox 工具，提供与本地 CLI agent 不同的使用形态，适合从“在线开发环境中的 AI 协作”角度做补充体验。它值得关注的点在于将编码、运行与交互集中在云端环境中，体现了 AI coding 工具的另一种产品路径。
 
 ## 辅助工具

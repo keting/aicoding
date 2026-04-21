@@ -23,11 +23,6 @@
   OpenAI 的 AI coding partner，强调端到端完成工程任务，适合放在当前主流 Coding Agent 工具链里持续跟踪。<br>
   **使用门槛：** 中。通常作为底层能力，需通过 API 或集成工具调用，适合有工程搭建能力的开发者。<br>
   **适用场景：** 构建自定义的 AI 编程助手、进行大规模的代码自动转换或文档生成。
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)<br>
-  GitHub 提供的命令行 Copilot 入口，适合和 GitHub 工作流、autopilot 模式、插件生态一起看。<br>
-  对学生/个人用户而言，GitHub Copilot Pro 的常见订阅价格约为 10 美元/月，覆盖 GPT 和 Claude 最新模型，每月可进行 300 次请求（单次对话内容token不计上限），性价比较高。<br>
-  **使用门槛：** 低。适合所有开发者，只需订阅 Copilot 服务，对习惯命令行的人极其友好。<br>
-  **适用场景：** 忘记 Git 命令或复杂的 Shell 指令时，通过自然语言快速执行系统操作。
 - [OpenCode](https://opencode.ai)<br>
   一款开源的终端 AI 编码助手。支持 GPT、Claude、Gemini、GLM 等多种模型；提供 Plan（仅分析）和 Build（实际修改）双模式；可集成到 VS Code、Cursor 等 IDE，并支持 MCP 扩展。分按量付费，Go 计划，自带模型三种付费模式。其中Go计划每月10\$（首月5\$），分每5h/周/月上限，不同模型可用额度不同，总体可适应中等强度开发。<br>
   GitHub 仓库：[sst/opencode](https://github.com/sst/opencode)<br>

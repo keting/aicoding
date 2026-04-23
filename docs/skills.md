@@ -103,6 +103,12 @@ Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，
 - **一句话**：用 Mermaid 图梳理的 agentic 模式集合：子 agent 编排、渐进式 skills、并行工具调用、Master-Clone 架构等
 - **推荐理由**：以可视化方式呈现 agent 设计模式，非常适合教学和论文写作参考
 
+### 14. ai-pair
+
+- [GitHub](https://github.com/axtonliu/ai-pair)
+- **一句话**：将 Claude、GPT、Gemini 编排为“一创作、两审查”的异构 AI 团队，把模型差异转化为互补视角。
+- **推荐理由**：展示了如何通过结构化角色分工，利用多个模型进行代码或内容的协同审查与优化，适合研究“Agent 编排”和“多模型协作”的直接实践样本。
+
 
 
 ---

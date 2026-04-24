@@ -60,7 +60,6 @@ aicoding/
 5. [Papers](docs/papers.md)
 6. [Benchmarks](docs/benchmarks.md)
 7. [Research Topics](docs/research-topics.md)
-8. [GitHub Collaboration Workflow](docs/github-collaboration-workflow.md)
 
 ## 推荐使用方式
 
@@ -130,8 +129,6 @@ aicoding/
 ## 如何贡献
 
 欢迎实验室成员和外部读者共同完善本项目。提交方式和建议可参考 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
-实验室内部协作流程可参考 [GitHub 协作规范](docs/github-collaboration-workflow.md)。
 
 **注意：一个 PR 只提交一类资源或一项修改，避免将多个不相关内容（如新增工具、修复链接、更新文档）混在同一个 PR 中。
 遵循单一职责原则，可让审核更高效、仓库历史更清晰，感谢你的贡献！**

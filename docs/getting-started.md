@@ -56,6 +56,8 @@ Agentic Engineering 强调的不是“让模型直接回答问题”，而是把
 
 给出适合实验室新成员的最小实践入口，例如先体验哪些工具、先阅读哪些项目、先了解哪些典型任务。
 
+如果准备参与系统开发型项目（如 [half](https://github.com/keting/half)），建议先阅读 [GitHub 协作规范](github-collaboration-workflow.md)，熟悉实验室当前使用的 `issue`、`branch` 和 `PR` 流程；如果参与的是内容整理型项目（如 [aicoding](../README.md)），通常可不要求先开 issue，PR 也不需要在正文里关联 issue，branch 命名也不强制带 issue 编号，但仍建议一个 PR 只解决一个问题，并按正常 review 与合并流程处理。具体豁免范围以协作规范中的适用范围为准。
+
 ## 后续可补充内容
 
 - 面向实验室新成员的 1 周入门路径

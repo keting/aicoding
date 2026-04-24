@@ -71,6 +71,7 @@ aicoding/
 2. 再阅读 [getting-started.md](docs/getting-started.md)，建立概念和入门路径
 3. 然后了解 [benchmarks.md](docs/benchmarks.md) 和 [papers.md](docs/papers.md)
 4. 最后结合 [research-topics.md](docs/research-topics.md) 思考潜在兴趣点
+5. 如果准备参与系统开发型项目（如 [half](https://github.com/keting/half)），建议先阅读 [GitHub 协作规范](docs/github-collaboration-workflow.md)，熟悉 `issue`、`branch`、`PR` 的协作方式；如果参与的是内容整理型项目（如 aicoding），通常可不要求先开 issue，PR 也不需要在正文里关联 issue，branch 命名也不强制带 issue 编号，但仍建议一个 PR 只解决一个问题，并按正常 review 与合并流程处理。具体豁免范围以协作规范中的适用范围为准。
 
 ### 对 AI Coding 爱好者（包括非技术人员）
 

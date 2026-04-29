@@ -111,7 +111,7 @@ Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，
 
 ### 15. Karpathy Guidelines
 
-- [GitHub](https://github.com/karpathy/guidelines)
+- [GitHub](https://github.com/forrestchang/andrej-karpathy-skills)
 - **一句话**：Karpathy 总结的 AI coding 指南，强调从人类写代码转向人类 review 代码的范式转变。
 - **推荐理由**：提出了”人类从作者变为编辑”的核心观点，以及一系列实用的 AI coding 工作原则（如从小处开始、频繁提交、保持简单等），是理解 AI 辅助编程方法论的重要参考。
 

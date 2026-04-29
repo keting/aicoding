@@ -106,8 +106,14 @@ Superpowers 是一个面向 coding agents 的 skills 框架和开发方法论，
 ### 14. ai-pair
 
 - [GitHub](https://github.com/axtonliu/ai-pair)
-- **一句话**：将 Claude、GPT、Gemini 编排为“一创作、两审查”的异构 AI 团队，把模型差异转化为互补视角。
-- **推荐理由**：展示了如何通过结构化角色分工，利用多个模型进行代码或内容的协同审查与优化，适合研究“Agent 编排”和“多模型协作”的直接实践样本。
+- **一句话**：将 Claude、GPT、Gemini 编排为”一创作、两审查”的异构 AI 团队，把模型差异转化为互补视角。
+- **推荐理由**：展示了如何通过结构化角色分工，利用多个模型进行代码或内容的协同审查与优化，适合研究”Agent 编排”和”多模型协作”的直接实践样本。
+
+### 15. Karpathy Guidelines
+
+- [GitHub](https://github.com/forrestchang/andrej-karpathy-skills)
+- **一句话**：Karpathy 总结的 AI coding 指南，强调从人类写代码转向人类 review 代码的范式转变。
+- **推荐理由**：提出了”人类从作者变为编辑”的核心观点，以及一系列实用的 AI coding 工作原则（如从小处开始、频繁提交、保持简单等），是理解 AI 辅助编程方法论的重要参考。
 
 
 

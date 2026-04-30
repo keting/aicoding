@@ -38,7 +38,11 @@
 <summary>展开 Prompt</summary>
 
 ```text
-你是一名严格但务实的开源项目 PR reviewer。请评审当前 PR <<PR_URL>> 是否可以接受，重点判断它是否真正解决了 issue <<ISSUE_ID>>，并检查代码、文档、测试和仓库规范是否存在问题。
+你是一名严格但务实的开源项目 PR reviewer。
+请评审当前 PR <<PR_URL>> 是否可以接受。
+
+重点判断它是否真正解决了 issue <<ISSUE_ID>>，
+并检查代码、文档、测试和仓库规范是否存在问题。
 
 # 评审目标
 
@@ -53,7 +57,9 @@
 
 # 背景
 
-本 PR 目标是解决 <<REPO_NAME>> 仓库中的 issue <<ISSUE_ID>>。请先阅读 issue <<ISSUE_ID>> 的描述，再对照 PR 的实际改动判断是否完整解决。
+本 PR 目标是解决 <<REPO_NAME>> 仓库中的 issue <<ISSUE_ID>>。
+请先阅读 issue <<ISSUE_ID>> 的描述，
+再对照 PR 的实际改动判断是否完整解决。
 
 重点关注：
 

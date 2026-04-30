@@ -57,11 +57,10 @@ aicoding/
 1. [Getting Started](docs/getting-started.md)
 2. [Websites](docs/websites.md)
 3. [Tools](docs/tools.md)
-4. [Skills](docs/skills.md)
-5. [Prompts](docs/prompts.md)
-6. [Papers](docs/papers.md)
-7. [Benchmarks](docs/benchmarks.md)
-8. [Research Topics](docs/research-topics.md)
+4. [Skills](docs/skills.md) & [Prompts](docs/prompts.md)
+5. [Papers](docs/papers.md)
+6. [Benchmarks](docs/benchmarks.md)
+7. [Research Topics](docs/research-topics.md)
 
 ## 推荐使用方式
 

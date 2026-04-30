@@ -17,11 +17,10 @@
 使用前只需要替换 Prompt 开头变量区中的以下值：
 
 - `REPO_URL`：开源项目仓库链接
-- `PROJECT_NAME`：项目名称
-- `PROJECT_TYPE`：项目类型，按需选择
+- `PROJECT_TYPE`：项目类型，默认填写“软件开发类”，也可按需改为工具库 / Web 系统 / Agent 框架 / 文档型 / CLI / 其他
 - `TARGET_STAGE`：下一阶段目标
 - `ISSUE_COUNT`：希望产出的 issue 数量上限
-- `HAS_WEB_ACCESS`：agent 是否具备 web 检索能力
+- `HAS_WEB_ACCESS`：agent 是否具备 web 检索能力，默认填写“是”
 
 ## Prompt
 
@@ -29,11 +28,10 @@
 # 变量区：只需要修改本区，其余正文不要手动替换
 
 REPO_URL = <<替换:开源项目链接,例如 https://github.com/org/repo>>
-PROJECT_NAME = <<替换:项目名称>>
-PROJECT_TYPE = <<替换:工具库 / Web 系统 / Agent 框架 / 文档型 / CLI / 其他>>
+PROJECT_TYPE = 软件开发类
 TARGET_STAGE = <<替换:下一阶段目标,例如 v0.2 / v0.3 / 公开发布前 / 社区化阶段>>
 ISSUE_COUNT = <<替换:希望产出的 issue 数量上限,例如 10-15;合格不足时宁少勿凑>>
-HAS_WEB_ACCESS = <<替换:true / false;false 时跳过外部资料检索并明确标注>>
+HAS_WEB_ACCESS = 是
 OUTPUT_LANGUAGE = 中文
 CREATE_ISSUES_DIRECTLY = false
 
@@ -42,7 +40,7 @@ CREATE_ISSUES_DIRECTLY = false
 你是一名经验丰富的开源项目 maintainer。
 
 请围绕 REPO_URL 指向的开源项目,系统分析项目现状,
-并提出 PROJECT_NAME 在 TARGET_STAGE 阶段适合直接创建的 issue。
+并提出该项目在 TARGET_STAGE 阶段适合直接创建的 issue。
 
 这些 issue 应以功能增强为主,
 兼顾安全、维护、文档、测试、工程质量和社区协作。
@@ -57,7 +55,7 @@ CREATE_ISSUES_DIRECTLY = false
 
 1. 不要只基于 README 或表面信息做判断,
    要结合可访问到的代码、文档、roadmap、现有 issues、discussions,
-   以及(在 HAS_WEB_ACCESS = true 时)同类项目和外部资料。
+   以及(在 HAS_WEB_ACCESS = 是时)同类项目和外部资料。
 2. 每个建议创建的 issue 必须问题明确、边界清晰、可执行、可验收;
    否则归入 discussion 候选或舍弃,不要凑数。
 3. 关键不确定性会显著影响 issue 边界、优先级或可执行性时,
@@ -115,19 +113,19 @@ CREATE_ISSUES_DIRECTLY = false
 - 是否有重复 discussion 可合并为同一 issue;
 - 是否暗示了文档、示例、安装、部署、配置方面的问题。
 
-## 5. 同类项目与外部资料(HAS_WEB_ACCESS = true 时执行)
+## 5. 同类项目与外部资料(HAS_WEB_ACCESS = 是时执行)
 
-参考 1-3 个与 PROJECT_NAME 在功能、定位或技术栈上相近的开源项目,
+参考 1-3 个与该项目在功能、定位或技术栈上相近的开源项目,
 以及相关技术文章、最佳实践、安全维护指南。
 
 要求：
 
 - 简要说明每个参考来源为什么相关;
 - 不要机械复制对方功能,
-  要结合 PROJECT_NAME 当前阶段判断是否适合借鉴;
+  要结合该项目当前阶段判断是否适合借鉴;
 - 重点关注功能设计、issue 组织、文档结构、安全实践、
   插件机制、测试体系、社区协作方式;
-- 从中提炼适合 PROJECT_NAME 下一阶段落地的 issue。
+- 从中提炼适合该项目下一阶段落地的 issue。
 
 如未访问到上述来源,
 请明确写出"未执行外部检索",并降低相关 issue 的权重。
@@ -231,5 +229,5 @@ CREATE_ISSUES_DIRECTLY = false
 - 不要把还需要拍板的事项写成 issue,改放 discussion 候选。
 - 标题要具体可读,避免"完善 X""优化 Y"这类空泛标题。
 - 验收标准要可观测,避免"提升用户体验"这类不可验收的描述。
-- 同类项目借鉴不等于复制,要结合 PROJECT_NAME 当前阶段判断。
+- 同类项目借鉴不等于复制,要结合该项目当前阶段判断。
 ```

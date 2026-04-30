@@ -18,7 +18,7 @@
 
 | 模板 | 适用场景 | 链接 |
 |---|---|---|
-| PR Review | 实验室项目收到 PR 后，让 coding agent 先做一轮结构化审查，帮助 reviewer 更快发现风险、遗漏和需要人工确认的问题。 | [通用 PR Review Prompt 模板](prompt-templates/pr-review.md) |
+| PR Review | 开源项目收到 PR 后，让 coding agent 先做一轮结构化审查，帮助 reviewer 更快发现风险、遗漏和需要人工确认的问题。 | [通用 PR Review Prompt 模板](prompt-templates/pr-review.md) |
 | Issue 提案 | 在版本节点前对开源项目做系统化盘点，提出下一阶段适合直接创建的 issue 候选。 | [通用 Issue 提案 Prompt 模板](prompt-templates/issue-proposal.md) |
 | 论文调研 | 生成月度论文调研报告，并同步更新论文索引。 | [PAPER_RESEARCH_PROMPT.md](monthly/PAPER_RESEARCH_PROMPT.md) |
 

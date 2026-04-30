@@ -34,8 +34,10 @@
 - `<<ISSUE_ID>>`：PR 对应的 issue 编号或链接，例如 `#22`
 - `<<REPO_NAME>>`：仓库名称，例如 `HALF`
 
+Prompt 正文默认收起。点击下方标题展开后，可使用代码块右上角按钮一键复制。
+
 <details>
-<summary>展开 Prompt</summary>
+<summary><strong><mark>点击展开 Prompt 模板</mark></strong></summary>
 
 ```text
 你是一名严格但务实的开源项目 PR reviewer。

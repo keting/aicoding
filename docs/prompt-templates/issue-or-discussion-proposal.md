@@ -47,7 +47,7 @@ OUTPUT_LANGUAGE = 中文
 1. Issue 候选：问题明确、边界清晰、可执行、可验收，适合直接创建 issue。
 2. Discussion 候选：方向有价值，但还需要方案讨论、需求澄清、社区共识或维护者决策，适合创建或继续 discussion。
 
-本任务不是只产出 issue，也不是泛泛 brainstorm；目标是帮助维护者把待做事项放到合适的协作载体中管理。
+本任务允许适度发散和 brainstorm，但最终要回到证据、成熟度和协作载体判断；目标是帮助维护者把待做事项放到合适的 issue 或 discussion 中管理。
 
 不要直接创建 GitHub issue 或 discussion，只输出建议和可复制草案。
 

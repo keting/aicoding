@@ -2,6 +2,8 @@
 
 本页用于整理与 AI coding（Vibe Coding）/ Coding Agent 相关的 skill、workflow、prompt 模板和实践经验。
 
+常用 prompt 模板已单独整理到 [prompts.md](prompts.md)。本页重点保留 skills、workflow 资源和方法论索引。
+
 ## 实用 Skills 推荐
 以下从功能覆盖面、社区活跃度、适用场景广度三个维度，精选出 20 个最实用的 skills/工具集，适合 Agent 开发方向的研究者和工程人员使用。
 

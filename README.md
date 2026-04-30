@@ -43,6 +43,7 @@ aicoding/
 └── docs/
     ├── tools.md
     ├── skills.md
+    ├── prompts.md
     ├── websites.md
     ├── getting-started.md
     ├── benchmarks.md
@@ -57,9 +58,10 @@ aicoding/
 2. [Websites](docs/websites.md)
 3. [Tools](docs/tools.md)
 4. [Skills](docs/skills.md)
-5. [Papers](docs/papers.md)
-6. [Benchmarks](docs/benchmarks.md)
-7. [Research Topics](docs/research-topics.md)
+5. [Prompts](docs/prompts.md)
+6. [Papers](docs/papers.md)
+7. [Benchmarks](docs/benchmarks.md)
+8. [Research Topics](docs/research-topics.md)
 
 ## 推荐使用方式
 
@@ -67,7 +69,7 @@ aicoding/
 
 建议按以下顺序使用：
 
-1. 先浏览 [tools.md](docs/tools.md) 和 [skills.md](docs/skills.md)，建立工具感知
+1. 先浏览 [tools.md](docs/tools.md)、[skills.md](docs/skills.md) 和 [prompts.md](docs/prompts.md)，建立工具与实践感知
 2. 再阅读 [getting-started.md](docs/getting-started.md)，建立概念和入门路径
 3. 然后了解 [benchmarks.md](docs/benchmarks.md) 和 [papers.md](docs/papers.md)
 4. 最后结合 [research-topics.md](docs/research-topics.md) 思考潜在兴趣点
@@ -88,6 +90,7 @@ aicoding/
 
 - [tools.md](docs/tools.md)
 - [skills.md](docs/skills.md)
+- [prompts.md](docs/prompts.md)
 - [websites.md](docs/websites.md)
 - [benchmarks.md](docs/benchmarks.md)
 

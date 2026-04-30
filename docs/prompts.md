@@ -1,6 +1,6 @@
 # Prompts
 
-本页用于沉淀实验室在 AI coding、Coding Agent、科研协作和工程协作中反复使用的 prompt 模板。
+本页用于沉淀AI coding、Coding Agent、科研协作和工程协作中反复使用的 prompt 模板。
 
 目标不是收集越多越好，而是保留那些可以直接复用、适合教学传播、并且能稳定改善 agent 输出质量的提示词。
 

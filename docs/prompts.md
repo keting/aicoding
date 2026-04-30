@@ -28,12 +28,12 @@
 
 ### 通用 PR Review Prompt 模板
 
-使用前请替换以下高亮占位符：
+使用前请替换以下占位符：
 
-- <mark><code>&lt;&lt;替换:PR_URL&gt;&gt;</code></mark>：待评审 PR 的链接，
+- `<<替换:PR_URL>>`：待评审 PR 的链接，
   例如 `https://github.com/keting/half/pull/62`
-- <mark><code>&lt;&lt;替换:ISSUE_ID&gt;&gt;</code></mark>：PR 对应的 issue 编号或链接，例如 `#22`
-- <mark><code>&lt;&lt;替换:REPO_NAME&gt;&gt;</code></mark>：仓库名称，例如 `HALF`
+- `<<替换:ISSUE_ID>>`：PR 对应的 issue 编号或链接，例如 `#22`
+- `<<替换:REPO_NAME>>`：仓库名称，例如 `HALF`
 
 代码块内部按纯文本渲染，无法可靠显示底色；因此占位符统一使用 `<<替换:...>>` 形式突出标识。
 

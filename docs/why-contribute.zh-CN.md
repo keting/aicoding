@@ -1,12 +1,12 @@
 # 为什么参与 AI Coding 开源项目贡献
 
-目前围绕 AI Coding / Coding Agent 方向维护两个相互关联的开源项目：
+本文面向希望了解或参与 AI Coding / Coding Agent 方向开源贡献的同学和社区贡献者。
+
+aicoding 与 HALF 是围绕 AI Coding / Coding Agent 方向的两个互补的开源项目，分别承担不同侧重的贡献场景：
 
 **aicoding**：AI Coding / Coding Agent 方向的学习、科研和实践资源索引，适合沉淀论文、benchmark、工具、开源项目、学习路径和研究问题。
 
 **HALF**：面向 AI Coding / Coding Agent 场景的人机协同工作流平台，适合参与系统开发、workflow 设计、agent 管理、handoff 与实验平台建设。
-
-本文面向希望了解或参与 AI Coding / Coding Agent 方向开源贡献的同学和社区贡献者。
 
 参与这些项目，是进入 AI Coding / Coding Agent 方向、训练 GitHub 协作能力、提升工程开发能力、积累科研基础和形成个人作品集的重要方式。
 
@@ -74,17 +74,19 @@ GitHub 协作是当前软件开发中非常主流的协作方式，很多互联�
 
 其中，有代表性的 Pull Request、Issue 讨论、代码 Review 记录、文档贡献和功能开发记录，都可以作为简历、面试和作品集材料。
 
-对于希望进一步参与相关科研或工程项目的同学，持续、规范的开源贡献记录，也有助于展示其学习主动性、技术兴趣、协作能力和长期投入程度；如果申请本实验室，会作为重要参考依据。
+对于希望进一步参与相关科研或工程项目的同学，持续、规范的开源贡献记录，也有助于展示其学习主动性、技术兴趣、协作能力和长期投入程度。
 
 ---
 
 ## 二、贡献前请注意
 
-具体协作流程请以项目贡献指南为准。开始贡献前，请特别注意：质量优先，小步提交；较大的想法先通过 Issue 或 Discussion 对齐；不要提交密钥、私有链接、敏感数据或未经授权的内容。
+具体协作流程与基本原则以各项目的贡献指南为准（`aicoding` 见 [CONTRIBUTING.md](../CONTRIBUTING.md)，`HALF` 见 [CONTRIBUTING.zh-CN.md](https://github.com/keting/half/blob/main/CONTRIBUTING.zh-CN.md)）。需要特别提醒的一点是：不要提交密钥、私有链接、敏感数据或未经授权的内容。
 
 ---
 
 ## 三、下一步如何开始
+
+如果你还不熟悉 GitHub 的 Issue / PR / Review 协作流程，建议先阅读 [GitHub 协作规范](./github-collaboration-workflow.md)；之后再按下面任一项目的入口开始。
 
 如果你想参与 `aicoding`，可以从以下步骤开始：
 
@@ -99,7 +101,5 @@ GitHub 协作是当前软件开发中非常主流的协作方式，很多互联�
 2. [HALF 新人参与路径](https://github.com/keting/half/blob/main/docs/newcomer-path.zh-CN.md)；
 3. [HALF 贡献指南](https://github.com/keting/half/blob/main/CONTRIBUTING.zh-CN.md)；
 4. 已标记为 `good first issue` 或 `status:ready` 的 Issue。
-
-如果你还不熟悉 GitHub 协作流程，可以先阅读 [GitHub 协作规范](./github-collaboration-workflow.md)。
 
 参与贡献不要求一开始就做很大的事情。持续、规范、高质量的小贡献，才是最重要的。

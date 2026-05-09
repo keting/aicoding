@@ -62,7 +62,12 @@ aicoding/
 5. [Papers](docs/papers.md)
 6. [Benchmarks](docs/benchmarks.md)
 7. [Research Topics](docs/research-topics.md)
-8. [Why Contribute](docs/why-contribute.zh-CN.md)
+
+## 参与贡献
+
+- [为什么参与贡献](docs/why-contribute.zh-CN.md)
+- [贡献指南](CONTRIBUTING.md)
+- [GitHub 协作规范](docs/github-collaboration-workflow.md)
 
 ## 推荐使用方式
 

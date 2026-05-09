@@ -44,6 +44,7 @@ aicoding/
     ├── tools.md
     ├── skills.md
     ├── prompts.md
+    ├── why-contribute.zh-CN.md
     ├── websites.md
     ├── getting-started.md
     ├── benchmarks.md
@@ -54,13 +55,14 @@ aicoding/
 
 ## 内容导航
 
-1. [Getting Started](docs/getting-started.md)
-2. [Websites](docs/websites.md)
-3. [Tools](docs/tools.md)
-4. [Skills](docs/skills.md) & [Prompts](docs/prompts.md)
-5. [Papers](docs/papers.md)
-6. [Benchmarks](docs/benchmarks.md)
-7. [Research Topics](docs/research-topics.md)
+1. [Why Contribute](docs/why-contribute.zh-CN.md)
+2. [Getting Started](docs/getting-started.md)
+3. [Websites](docs/websites.md)
+4. [Tools](docs/tools.md)
+5. [Skills](docs/skills.md) & [Prompts](docs/prompts.md)
+6. [Papers](docs/papers.md)
+7. [Benchmarks](docs/benchmarks.md)
+8. [Research Topics](docs/research-topics.md)
 
 ## 推荐使用方式
 

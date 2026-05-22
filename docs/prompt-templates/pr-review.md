@@ -62,9 +62,36 @@ REPO_NAME = <<替换:仓库名称>>
 - 若 PR 涉及代码、契约、测试、运行路径、迁移、配置 —— 适用，必须按顺序执行。
 - 若 PR 是纯文档 / 纯说明性注释 / 版式调整，且不影响生成产物、示例代码、
   API 文档、配置或运行行为 —— 在评审中明确说明"不适用"，
-  跳过步骤 1-3，仅执行步骤 0 和步骤 4。
+  跳过步骤 1-3，仅执行步骤 -1、步骤 0 和步骤 4。
 - 若某一步因环境 / 权限 / 工具不可用而无法执行 —— 必须在评审报告中明确说明
   "未执行 + 原因 + 替代验证方式"，不要假设"作者已确认"或"应该没问题"。
+
+## 步骤 -1：锁定 PR 评审基准，禁止混用旧工作区
+
+在读取 diff、代码、测试或文档前，必须先确认并记录本次评审基准：
+
+- 从 `PR_URL` 获取 base branch / base SHA / head branch / head SHA / PR 最新 commit SHA。
+- 若使用本地仓库评审，必须先 fetch PR 最新 head，并确认本地读取代码的 commit
+  等于 PR 最新 head SHA。
+- 推荐使用独立临时 worktree 或 detached checkout 评审，例如：
+  - `git fetch origin pull/<PR_NUMBER>/head:refs/pr-review/<PR_NUMBER>`
+  - `git worktree add --detach /tmp/<repo>-pr-<PR_NUMBER> refs/pr-review/<PR_NUMBER>`
+- 后续所有 `git diff`、文件读取、grep、测试、构建都必须在这个同一 checkout /
+  commit 下执行。
+- 不得混用当前工作区 `HEAD`、旧临时分支、缓存目录、仓库内嵌套 clone、历史
+  checkout 或 PR head 以外的文件内容。特别注意不要从 `repos/`、`tmp/`、
+  `dist/`、`.venv/`、`node_modules/` 等生成或缓存目录里的旧源码下结论。
+- 如果 PR 在评审过程中更新了 commit，必须重新 fetch 并二选一：
+  - 重新基于最新 head 评审；
+  - 或在报告中明确说明"本报告仅评审到 SHA=<旧 SHA>，不是最新 PR head"。
+
+评审报告中必须写明：
+
+- Review base SHA；
+- Review head SHA；
+- 本地评审目录；
+- 本地 `git rev-parse HEAD`；
+- 是否确认该 checkout 与 PR 最新 head 一致。
 
 ## 步骤 0：读项目背景，校准严重性
 
@@ -127,6 +154,9 @@ PR 实际需要触达的文件可能比 issue 列出的多。漏改一个调用�
 - 加上调用了被 PR 修改的函数 / 模块 / 字段 / 路由的所有现有测试文件
 - 按项目标准命令运行：测试 + 受影响范围的 typecheck + lint；
   涉及前端 / 编译型语言时，运行 build。
+- 所有测试 / typecheck / build / lint 必须在步骤 -1 锁定的 checkout 中运行。
+  如果测试在另一个目录运行，必须先证明该目录的 `git rev-parse HEAD`
+  等于本次 Review head SHA；否则测试结果不得作为本 PR 的验证结果。
 - 如运行不了（环境 / 依赖原因），必须在评审报告中标注"未运行 + 原因 + 替代验证方式"，
   并至少做静态对照（比对调用签名、字段引用）。
 
@@ -333,6 +363,17 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
 - 严重性标签仍按上面的标准判断，不要因为语言通俗就降低或拔高严重性。
 - 不要为了举例编造不存在的场景；例子必须来自 issue、diff、测试结果、grep 命中或合理的真实使用路径。
 
+## 0. 评审基准
+
+请先明确列出：
+
+- PR base SHA：
+- PR head SHA：
+- 本地评审目录：
+- 本地 `git rev-parse HEAD`：
+- 是否确认本地 checkout 与 PR 最新 head 一致：
+- 若不一致，原因和影响：
+
 ## 1. 总体结论
 
 结论只能选一个：
@@ -417,6 +458,11 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
 
 写完评审报告后、提交给用户前，**逐条核对**：
 
+0. 我是否记录了 PR 最新 head SHA，并确认本地读取、grep、测试、构建使用的
+   checkout 与该 SHA 一致？
+0.1 我是否避免了从当前工作区旧分支、缓存目录、仓库内嵌套 clone、历史 checkout
+   或生成目录中读取代码？
+0.2 如果 PR 在评审过程中更新，我是否重新 fetch 并重新核对关键结论？
 1. 我是否真的执行了"必须执行的验证步骤"中适用的所有步骤？哪些没做、原因是什么？
    是否在报告中如实标注？
 2. 每个 Blocker 是否有"已实际验证"的证据（测试 / typecheck / build 运行结果、

@@ -70,24 +70,43 @@ REPO_NAME = <<替换:仓库名称>>
 
 在读取 diff、代码、测试或文档前，必须先确认并记录本次评审基准：
 
-- 从 `PR_URL` 获取 base branch / base SHA / head branch / head SHA / PR 最新 commit SHA。
-- 若使用本地仓库评审，必须先 fetch PR 最新 head，并确认本地读取代码的 commit
-  等于 PR 最新 head SHA。
-- 推荐使用独立临时 worktree 或 detached checkout 评审，例如：
-  - `git fetch origin pull/<PR_NUMBER>/head:refs/pr-review/<PR_NUMBER>`
-  - `git worktree add --detach /tmp/<repo>-pr-<PR_NUMBER> refs/pr-review/<PR_NUMBER>`
+- 必须先打开 `PR_URL`（或用 GitHub API / `gh pr view`）读取 PR 元数据，
+  不得凭本地分支名、旧 review 分支、PR 编号分支或缓存目录推断评审对象。
+- 必须记录并区分以下信息：
+  - base repo / base branch / base SHA；
+  - head repo owner / head repo URL / head branch / head SHA；
+  - PR 页面显示的最新 commit SHA。
+- 正确评审对象是 PR 的 `head.repo:head.ref`，例如
+  `contributor/repo:feature-branch`；不是当前工作区 `HEAD`，也不是本地
+  `pr-<number>-review`、`review-pr-<number>-tmp` 等临时分支，除非已经证明
+  该分支的 commit 等于 PR 最新 head SHA。
+- 无论 PR 是否来自 fork，都必须 fetch PR head 并校验 commit SHA。可用以下任一方式：
+  - 直接 fetch PR head repo/ref：
+    `git fetch <HEAD_REPO_URL> <HEAD_BRANCH>`
+    然后 `git rev-parse FETCH_HEAD` 必须等于 PR head SHA；
+  - fetch GitHub PR head ref：
+    `git fetch origin pull/<PR_NUMBER>/head:refs/pr-review/<PR_NUMBER>`
+    然后 `git rev-parse refs/pr-review/<PR_NUMBER>` 必须等于 PR head SHA。
+- 推荐基于已校验的 head SHA 创建独立临时 worktree 或 detached checkout，例如：
+  - `git worktree add --detach /tmp/<repo>-pr-<PR_NUMBER> <HEAD_SHA>`
 - 后续所有 `git diff`、文件读取、grep、测试、构建都必须在这个同一 checkout /
   commit 下执行。
+- 在开始实质评审前必须显式自检一次：
+  - `git rev-parse HEAD` 是否等于 PR head SHA；
+  - `git remote -v` 或 fetch 命令是否指向 PR 的 head repo；
+  - 当前目录是否为本次临时评审目录。
 - 不得混用当前工作区 `HEAD`、旧临时分支、缓存目录、仓库内嵌套 clone、历史
   checkout 或 PR head 以外的文件内容。特别注意不要从 `repos/`、`tmp/`、
   `dist/`、`.venv/`、`node_modules/` 等生成或缓存目录里的旧源码下结论。
-- 如果 PR 在评审过程中更新了 commit，必须重新 fetch 并二选一：
+- 如果 PR 在评审过程中更新了 commit（包括作者 force-push），必须重新 fetch
+  并二选一：
   - 重新基于最新 head 评审；
   - 或在报告中明确说明"本报告仅评审到 SHA=<旧 SHA>，不是最新 PR head"。
 
 评审报告中必须写明：
 
 - Review base SHA；
+- Review head repo / head branch；
 - Review head SHA；
 - 本地评审目录；
 - 本地 `git rev-parse HEAD`；
@@ -368,6 +387,8 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
 请先明确列出：
 
 - PR base SHA：
+- PR head repo：
+- PR head branch：
 - PR head SHA：
 - 本地评审目录：
 - 本地 `git rev-parse HEAD`：
@@ -458,31 +479,31 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
 
 写完评审报告后、提交给用户前，**逐条核对**：
 
-0. 我是否记录了 PR 最新 head SHA，并确认本地读取、grep、测试、构建使用的
+1. 我是否记录了 PR head repo / head branch / 最新 head SHA，并确认本地读取、grep、测试、构建使用的
    checkout 与该 SHA 一致？
-0.1 我是否避免了从当前工作区旧分支、缓存目录、仓库内嵌套 clone、历史 checkout
+2. 我是否避免了从当前工作区旧分支、缓存目录、仓库内嵌套 clone、历史 checkout
    或生成目录中读取代码？
-0.2 如果 PR 在评审过程中更新，我是否重新 fetch 并重新核对关键结论？
-1. 我是否真的执行了"必须执行的验证步骤"中适用的所有步骤？哪些没做、原因是什么？
+3. 如果 PR 在评审过程中更新（包括作者 force-push），我是否重新 fetch 并重新核对关键结论？
+4. 我是否真的执行了"必须执行的验证步骤"中适用的所有步骤？哪些没做、原因是什么？
    是否在报告中如实标注？
-2. 每个 Blocker 是否有"已实际验证"的证据（测试 / typecheck / build 运行结果、
+5. 每个 Blocker 是否有"已实际验证"的证据（测试 / typecheck / build 运行结果、
    grep 命中位置、复现步骤）？还是只是推测？
-3. 报告中每一条问题，撤掉它对作者有损失吗？没损失就撤掉（不要为凑数堆 Nit）。
-4. 我是否打了与仓库已有惯例冲突的风格 nit？
-5. 我对未上线 / MVP 项目报的性能 / 并发 / 防御性编码建议，
+6. 报告中每一条问题，撤掉它对作者有损失吗？没损失就撤掉（不要为凑数堆 Nit）。
+7. 我是否打了与仓库已有惯例冲突的风格 nit？
+8. 我对未上线 / MVP 项目报的性能 / 并发 / 防御性编码建议，
    是否对应"当前可复现的真实退化 / 真实系统边界 / 真实历史数据 / 真实客户端"？
    都不是的话应该撤掉。
-6. 我是否包含了 PR 元数据、commit author、分支命名等流程纪律事项？这些应该撤掉
+9. 我是否包含了 PR 元数据、commit author、分支命名等流程纪律事项？这些应该撤掉
    （除非是仓库明确规定的合并阻塞规则）。
-7. 我对 issue 的"预计影响范围"是当成清单了，还是当成提示了？
+10. 我对 issue 的"预计影响范围"是当成清单了，还是当成提示了？
    是否独立 grep 了所有需修改入口（含权限 helper、字段、路由、测试 fixture）？
-8. 若 PR 改动了鉴权 / 权限 / 资源归属 / 可见性 filter，
+11. 若 PR 改动了鉴权 / 权限 / 资源归属 / 可见性 filter，
    我是否核对了所有受影响入口？是否检查了 IDOR 类问题？
-9. 若 PR 声称某路径应被禁止 / 拒绝 / 不可见 / 不可编辑，我是否做了负面验证？
-10. 若 PR 改动了 schema / 字段，我是否核对了 migration、默认值、前滚 / 回滚 / 失败恢复策略？
-11. 若 PR 新增配置、环境变量或依赖，我是否核对了文档、示例、部署配置和 lockfile？
-12. 严重性分级是否符合"严重性分级标准"？是否有把 Minor 当 Major 报、或反过来？
-13. 总体结论是否与 Blocker / Major 数量一致？
+12. 若 PR 声称某路径应被禁止 / 拒绝 / 不可见 / 不可编辑，我是否做了负面验证？
+13. 若 PR 改动了 schema / 字段，我是否核对了 migration、默认值、前滚 / 回滚 / 失败恢复策略？
+14. 若 PR 新增配置、环境变量或依赖，我是否核对了文档、示例、部署配置和 lockfile？
+15. 严重性分级是否符合"严重性分级标准"？是否有把 Minor 当 Major 报、或反过来？
+16. 总体结论是否与 Blocker / Major 数量一致？
 
 # 注意事项
 

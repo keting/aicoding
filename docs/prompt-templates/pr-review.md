@@ -85,7 +85,7 @@ REPO_NAME = <<替换:仓库名称>>
     `git fetch <HEAD_REPO_URL> <HEAD_BRANCH>`
     然后 `git rev-parse FETCH_HEAD` 必须等于 PR head SHA；
   - fetch GitHub PR head ref：
-    `git fetch origin pull/<PR_NUMBER>/head:refs/pr-review/<PR_NUMBER>`
+    `git fetch --force origin pull/<PR_NUMBER>/head:refs/pr-review/<PR_NUMBER>`
     然后 `git rev-parse refs/pr-review/<PR_NUMBER>` 必须等于 PR head SHA。
 - 推荐基于已校验的 head SHA 创建独立临时 worktree 或 detached checkout，例如：
   - `git worktree add --detach /tmp/<repo>-pr-<PR_NUMBER> <HEAD_SHA>`
@@ -93,7 +93,8 @@ REPO_NAME = <<替换:仓库名称>>
   commit 下执行。
 - 在开始实质评审前必须显式自检一次：
   - `git rev-parse HEAD` 是否等于 PR head SHA；
-  - `git remote -v` 或 fetch 命令是否指向 PR 的 head repo；
+  - `git remote -v` 或 fetch 命令是否指向 PR base repo（使用 GitHub PR head ref 时）
+    或 PR head repo（直接 fetch head repo/ref 时）；
   - 当前目录是否为本次临时评审目录。
 - 不得混用当前工作区 `HEAD`、旧临时分支、缓存目录、仓库内嵌套 clone、历史
   checkout 或 PR head 以外的文件内容。特别注意不要从 `repos/`、`tmp/`、
@@ -103,14 +104,7 @@ REPO_NAME = <<替换:仓库名称>>
   - 重新基于最新 head 评审；
   - 或在报告中明确说明"本报告仅评审到 SHA=<旧 SHA>，不是最新 PR head"。
 
-评审报告中必须写明：
-
-- Review base SHA；
-- Review head repo / head branch；
-- Review head SHA；
-- 本地评审目录；
-- 本地 `git rev-parse HEAD`；
-- 是否确认该 checkout 与 PR 最新 head 一致。
+评审报告中必须按输出格式 §0 填写本次评审基准字段。
 
 ## 步骤 0：读项目背景，校准严重性
 
@@ -175,7 +169,7 @@ PR 实际需要触达的文件可能比 issue 列出的多。漏改一个调用�
   涉及前端 / 编译型语言时，运行 build。
 - 所有测试 / typecheck / build / lint 必须在步骤 -1 锁定的 checkout 中运行。
   如果测试在另一个目录运行，必须先证明该目录的 `git rev-parse HEAD`
-  等于本次 Review head SHA；否则测试结果不得作为本 PR 的验证结果。
+  等于本次 PR head SHA；否则测试结果不得作为本 PR 的验证结果。
 - 如运行不了（环境 / 依赖原因），必须在评审报告中标注"未运行 + 原因 + 替代验证方式"，
   并至少做静态对照（比对调用签名、字段引用）。
 
@@ -483,7 +477,8 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
    checkout 与该 SHA 一致？
 2. 我是否避免了从当前工作区旧分支、缓存目录、仓库内嵌套 clone、历史 checkout
    或生成目录中读取代码？
-3. 如果 PR 在评审过程中更新（包括作者 force-push），我是否重新 fetch 并重新核对关键结论？
+3. 如果 PR 在评审过程中更新（包括作者 force-push），我是否重新 fetch（force-push 后重 fetch
+   需 `--force`）并重新核对关键结论？
 4. 我是否真的执行了"必须执行的验证步骤"中适用的所有步骤？哪些没做、原因是什么？
    是否在报告中如实标注？
 5. 每个 Blocker 是否有"已实际验证"的证据（测试 / typecheck / build 运行结果、

@@ -2,19 +2,18 @@
 
 ## 使用方式
 
-- PR 链接或 diff
-- 相关 issue 或任务说明（如果需求有变化，请先更新 issue 或其他需求文档，否则评审会按旧需求判断）
+- PR 链接
+- PR 关联 issue 或任务说明必须能从 PR metadata、标题、正文、linked issues 或 commit message 中识别
+  （如果需求有变化，请先更新 issue 或其他需求文档，否则评审会按旧需求判断）
 - 仓库的测试、构建和协作要求
 - 希望重点关注的模块或风险点
 
 适用前提：此模板优先用于 issue 驱动型 PR。
-若 PR 没有对应 issue，可在 Prompt 开头变量区将 `ISSUE_ID` 留空，并让 agent 跳过 issue 对齐检查。
+若 PR 没有关联 issue，不应继续评审；请先要求作者补充 issue 关联。
 
 使用前只需要替换 Prompt 开头变量区中的以下值：
 
 - `PR_URL`：待评审 PR 的链接，例如 `https://github.com/<org>/<repo>/pull/123`
-- `ISSUE_ID`：PR 对应的 issue 编号或链接，例如 `#42`
-- `REPO_NAME`：仓库名称，例如 `<repo-name>`
 
 ## Prompt
 
@@ -22,19 +21,22 @@
 # 变量区：只需要修改本区，其余正文不要手动替换
 
 PR_URL = <<替换:待评审 PR 的链接>>
-ISSUE_ID = <<替换:PR 对应的 issue 编号或链接；没有则留空>>
-REPO_NAME = <<替换:仓库名称>>
 
 # 任务
 
 你是一名严格但务实的开源项目 PR reviewer。
 请评审 PR_URL 指向的 PR 是否可以接受。
 
-重点判断它是否真正解决了 ISSUE_ID 对应的 issue，
+重点判断它是否真正解决了 PR 关联 issue，
 并检查代码、文档、测试和仓库规范是否存在问题。
 
-如果 ISSUE_ID 为空，请跳过 issue 对齐检查，
-改为根据 PR 标题、描述和实际 diff 判断是否适合合并到 PR 当前 base branch。
+必须从 PR metadata、标题、正文、linked issues 和 commit message 中识别关联 issue。
+仓库名称、base branch、head branch 和 commit SHA 均必须从 `PR_URL` 或 GitHub API /
+`gh pr view` 读取，不要让用户手动填写。
+
+如果无法识别关联 issue，必须停止评审，并只输出：
+
+> 未找到 PR 关联 issue，拒绝评审。请先在 PR 描述、标题或 GitHub linked issues 中补充 issue 关联。
 
 评审时必须区分两个概念：
 
@@ -174,9 +176,8 @@ PR 实际需要触达的文件可能比 issue 列出的多。漏改一个调用�
 
 ## 步骤 4：核对 issue 验收清单的每条对应实现
 
-若 ISSUE_ID 非空，把 issue 的"验收标准 / 已确认规则 / 期望行为"逐条列出，
+把关联 issue 的"验收标准 / 已确认规则 / 期望行为"逐条列出，
 对**每一条**到 PR diff（含未改动的相关文件）里找对应实现位置。
-若 ISSUE_ID 为空，则根据 PR 标题、描述和实际 diff 推断 PR 的验收点，并逐条核对。
 
 特别注意"任务执行 / 流程模板 / 计划生成 / 项目编辑"等容易被遗忘的入口路径，
 不要只看 issue 显式提到的几个 router。
@@ -189,7 +190,7 @@ PR 实际需要触达的文件可能比 issue 列出的多。漏改一个调用�
 
 ## 1. Issue 对齐与范围控制
 
-- ISSUE_ID 的核心问题是什么？步骤 4 中是否每条验收标准都找到对应实现？
+- 关联 issue 的核心问题是什么？步骤 4 中是否每条验收标准都找到对应实现？
 - 是否存在误解 issue 目标的情况？
 - 是否有超出 issue 范围的额外改动？是否应拆分？
 
@@ -383,11 +384,12 @@ release note policy / changelog 必填等），可以放到"仓库规范"里做�
 - 多个 Blocker 或核心路径 broken → "不应合并 / 暂缓合并"；
 - 只有 Minor/Nit → "可以接受并合并"或"需要小修改后再合并"。
 
-## 2. 是否解决 issue ISSUE_ID
+## 2. 是否解决关联 issue
 
 请明确说明：
 
-- ISSUE_ID 的核心要求 / 验收清单逐条列出；
+- 关联 issue 编号 / 链接；
+- 关联 issue 的核心要求 / 验收清单逐条列出；
 - PR 已完成的部分（每条对应到具体文件/函数）；
 - PR 未完成或可疑的部分；
 - 是否存在偏离 issue 的改动。

@@ -97,6 +97,10 @@
   CodeGraph 是面向 Coding Agent 的代码知识图谱 / 结构化代码索引工具，通过 tree-sitter 解析项目中的符号、调用关系和文件结构，让 Agent 能快速回答“函数在哪里定义”“谁调用了它”“修改会影响哪里”等问题。它通常以 MCP 工具形式接入工作流，适合中大型代码库的上下文检索、影响分析和代码理解。<br>
   **使用门槛：** 中。需要初始化代码索引，并理解 MCP / Agent 工具调用方式。<br>
   **适用场景：** 在复杂仓库中辅助 Coding Agent 快速定位符号、追踪调用链、分析修改影响，减少反复 grep 和手动读文件的成本。
+- [CC Switch](https://github.com/farion1231/cc-switch)<br>
+  CC Switch 是一个跨平台桌面配置管理工具，可在统一界面中管理 Claude Code、Codex、Gemini CLI、OpenCode 等 AI coding 工具的供应商配置，并集中管理 MCP、Prompts 和 Skills。它支持在不同供应商配置间快速切换，通过本地数据库、原子写入和自动备份降低手工修改多个配置文件时的出错风险。<br>
+  **使用门槛：** 低。需要已安装相应的 AI coding 工具，并了解所使用供应商的登录或 API Key 配置方式。<br>
+  **适用场景：** 同时使用多种 CLI coding agents，或需要频繁切换官方登录、模型供应商与 MCP / Skills 配置的个人开发环境。
 
 ## 辅助工具
 

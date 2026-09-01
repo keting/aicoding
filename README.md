@@ -8,6 +8,12 @@ AICoding 是一个公开维护、实验室优先使用的资源索引项目，�
 
 本项目当前主要服务于实验室师生的学习与科研需求，同时以公开仓库的方式持续积累和完善，希望逐步形成一个结构清晰、可长期维护的方向知识入口。
 
+> **Harness 入门实践 · [Agent Hi Tax](https://github.com/aicodingresearch/agent-hi-tax/blob/main/README.zh-CN.md)**
+>
+> 实验室正在维护 Agent Hi Tax，一项面向真实 Agent Harness 的开放实验。它从一句 `hi` 出发，观察 Agent 在调用模型之外加载的系统提示词、规则、工具、skills、MCP、工作区上下文和缓存，并记录 token、额度或积分、延迟及可获得的证据，适合作为理解 Harness 全貌的第一步。
+>
+> 如果你因为这份资源索引而准备联系实验室，欢迎用手头已有的 Agent 参与一次测试：在事先声明、事后可复核的环境中，以相同设置完成至少 3 次独立运行，脱敏后通过 PR 提交。实验不限定 Agent，也不要求结果“漂亮”；这不是联系实验室的前置条件。请从[待测场景清单](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/wanted-scenarios.zh-CN.md)选择或补充场景，并按照[实测指南](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/contributor-walkthrough.zh-CN.md)完成实验。
+
 ## 项目目标
 
 - 帮助新成员快速入门 AI coding（Vibe Coding）/ Coding Agent

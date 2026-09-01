@@ -8,13 +8,11 @@ AICoding 是一个公开维护、实验室优先使用的资源索引项目，�
 
 本项目当前主要服务于实验室师生的学习与科研需求，同时以公开仓库的方式持续积累和完善，希望逐步形成一个结构清晰、可长期维护的方向知识入口。
 
-## 实验室开放实践：Agent Hi Tax
-
-实验室正在维护一个面向真实 Agent Harness 的开放实验：[Agent Hi Tax](https://github.com/aicodingresearch/agent-hi-tax/blob/main/README.zh-CN.md)。如果你因为这份资源索引而准备联系实验室，我们尤其欢迎你先用手头已有的 Agent 参与一次测试。
-
-这个实验把一句最小输入 `hi` 变成对真实 Agent Harness 的观察：Agent 不只调用模型，还会加载系统提示词、规则、工具、skills、MCP、工作区上下文和缓存。你需要在事先声明、事后可复核的环境中，以相同设置完成至少 3 次独立运行，记录 token、额度或积分、延迟及可获得的证据，完成脱敏后通过 PR 提交。重点不是比较哪个 Agent “最好”，而是准确记录一次完整的 Harness 过程。
-
-实验不限定 Agent，也不要求结果“漂亮”。你可以复测已有场景，也可以用自己正在使用的 Agent 补充新场景。建议先查看[待测场景清单](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/wanted-scenarios.zh-CN.md)，再按照[实测指南](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/contributor-walkthrough.zh-CN.md)完成实验和提交。这不是联系实验室的前置条件，但一次诚实、可复核的观察，往往比泛泛描述“对 AI Coding 感兴趣”更容易让后续交流从一个具体问题开始。
+> **实验室近期关注 · [Agent Hi Tax](https://github.com/aicodingresearch/agent-hi-tax/blob/main/README.zh-CN.md)**
+>
+> <sub>实验室正在维护一个面向真实 Agent Harness 的开放实验。它以一句 `hi` 作为最小输入，观察 Agent 在调用模型之外加载的系统提示词、规则、工具、skills、MCP、工作区上下文和缓存，并记录 token、额度或积分、延迟及可获得的证据。</sub>
+>
+> <sub>如果你因为这份资源索引而准备联系实验室，欢迎先用手头已有的 Agent 参与一次测试：在事先声明、事后可复核的环境中，以相同设置完成至少 3 次独立运行，脱敏后通过 PR 提交。实验不限定 Agent，也不要求结果“漂亮”；这不是联系实验室的前置条件。请从[待测场景清单](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/wanted-scenarios.zh-CN.md)选择或补充场景，并按照[实测指南](https://github.com/aicodingresearch/agent-hi-tax/blob/main/docs/contributor-walkthrough.zh-CN.md)完成实验。</sub>
 
 ## 项目目标
 
